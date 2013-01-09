@@ -54,7 +54,7 @@ public class TableContainer extends JScrollPane
 	{
 		Vector<Integer> vectorToAdd = ProgramFrame.getInstance().getInputValues();
 		
-		//ŸberprŸfe, ob eingegebener Punkt innerhalb des gŸltigen Bereichs liegt
+		//ueberpruefe, ob eingegebener Punkt innerhalb des gueltigen Bereichs liegt
 		switch (Validator.validateVectorInput(vectorToAdd.get(0), vectorToAdd.get(1)))
 		{
 			case X_INVALID:
@@ -70,7 +70,7 @@ public class TableContainer extends JScrollPane
 		//Vektor in Tabelle eintragen
 		this.tableModel.addRow(vectorToAdd);
 		
-		//Eingabefelder lšschen und Cursor ins x-Feld setzen
+		//Eingabefelder loeschen und Cursor ins x-Feld setzen
 		ProgramFrame.getInstance().clearInputFields();
 	}
 	
@@ -78,8 +78,8 @@ public class TableContainer extends JScrollPane
 	{
 		int[] selectedRows = this.vectorTable.getSelectedRows();
 		
-		//Schleife zum Entfernen der markierten EintrŠge
-		//muss rŸckwŠrts laufen, da sich nach jedem Lšschen die Indizes verschieben
+		//Schleife zum Entfernen der markierten Eintraege
+		//muss rueckwaerts laufen, da sich nach jedem Loeschen die Indizes verschieben
 		for (int i=selectedRows.length-1; i>=0; i--)
 		{
 			this.tableModel.removeRow(selectedRows[i]);
@@ -88,13 +88,19 @@ public class TableContainer extends JScrollPane
 		ProgramFrame.getInstance().enableDeleteButton(false);
 	}
 	
+	@SuppressWarnings("unchecked")
+	public Vector<Vector<Integer>> getListItems()
+	{
+		return this.tableModel.getDataVector();
+	}
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Test-Functions----------------------------------
 	//-----------------------------------------------------------------------------
 	
 	public void fillList()
 	{
-		for (int i=0; i<100; i++)
+		for (int i=0; i<600; i++)
 		{
 			Vector<Integer> pointToAdd = new Vector<Integer>(2);
 			pointToAdd.add(i);

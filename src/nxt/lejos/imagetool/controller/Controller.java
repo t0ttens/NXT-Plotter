@@ -1,30 +1,36 @@
-package nxt.lejos.imagetool;
+package nxt.lejos.imagetool.controller;
 
-import nxt.lejos.imagetool.controller.Controller;
-import nxt.lejos.imagetool.model.Constants;
+import nxt.lejos.imagetool.view.ProgramFrame;
 
-/**
- * Christopher Ottens
- * 2013
- */
-
-public class ImageTool
+public class Controller
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
+	private static Controller instance = null;
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
 
+	private Controller()
+	{
+		System.out.println("Controller startet");
+		
+		ProgramFrame.getInstance();
+	}
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
 	
-	public static void main(String[] args)
+	public static Controller getInstance()
 	{
-		System.out.println("ImageTool " + Constants.version + " startet");
-		Controller.getInstance();
+		if (instance == null)
+		{
+			instance = new Controller();
+		}
+		return instance;
 	}
 }

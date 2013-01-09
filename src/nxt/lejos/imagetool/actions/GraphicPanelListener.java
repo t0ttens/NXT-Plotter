@@ -1,19 +1,14 @@
-package nxt.lejos.imagetool;
+package nxt.lejos.imagetool.actions;
 
-import nxt.lejos.imagetool.controller.Controller;
-import nxt.lejos.imagetool.model.Constants;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-/**
- * Christopher Ottens
- * 2013
- */
-
-public class ImageTool
+public class GraphicPanelListener implements MouseListener
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
-
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -21,10 +16,34 @@ public class ImageTool
 	//-----------------------------------------------------------------------------
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
-	
-	public static void main(String[] args)
+
+	@Override
+	public void mouseClicked(MouseEvent e)
 	{
-		System.out.println("ImageTool " + Constants.version + " startet");
-		Controller.getInstance();
+		System.out.println("click " + e.getButton());
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e)
+	{
+		System.out.println("enter ");
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e)
+	{
+		System.out.println("exit ");
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e)
+	{
+		System.out.println("press ");
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e)
+	{
+		System.out.println("release ");
 	}
 }

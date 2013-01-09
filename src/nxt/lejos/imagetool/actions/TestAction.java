@@ -1,19 +1,19 @@
-package nxt.lejos.imagetool;
+package nxt.lejos.imagetool.actions;
 
-import nxt.lejos.imagetool.controller.Controller;
-import nxt.lejos.imagetool.model.Constants;
+import java.awt.event.ActionEvent;
 
-/**
- * Christopher Ottens
- * 2013
- */
+import javax.swing.AbstractAction;
 
-public class ImageTool
+import nxt.lejos.imagetool.view.SimpleDrawComponent;
+
+public class TestAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
+	private static final long serialVersionUID = 1L;
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -21,10 +21,12 @@ public class ImageTool
 	//-----------------------------------------------------------------------------
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
-	
-	public static void main(String[] args)
+
+	@Override
+	public void actionPerformed(ActionEvent arg0)
 	{
-		System.out.println("ImageTool " + Constants.version + " startet");
-		Controller.getInstance();
+		System.out.println("TestButton");
+		SimpleDrawComponent.getInstance().fetchData();
+		SimpleDrawComponent.getInstance().repaint();
 	}
 }

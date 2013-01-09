@@ -1,19 +1,18 @@
-package nxt.lejos.imagetool;
+package nxt.lejos.imagetool.actions;
 
-import nxt.lejos.imagetool.controller.Controller;
-import nxt.lejos.imagetool.model.Constants;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.util.Vector;
 
-/**
- * Christopher Ottens
- * 2013
- */
-
-public class ImageTool
+public class GraphicPanelMotions implements MouseMotionListener
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
+	private static int x = 0;
+	private static int y = 0;
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -22,9 +21,24 @@ public class ImageTool
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
 	
-	public static void main(String[] args)
+	@Override
+	public void mouseDragged(MouseEvent arg0)
 	{
-		System.out.println("ImageTool " + Constants.version + " startet");
-		Controller.getInstance();
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent arg0)
+	{
+		x = arg0.getX();
+		y = arg0.getY();
+		System.out.println(x + " " + y);
+	}
+	
+	public static Vector<Integer> getCoordinates()
+	{
+		Vector<Integer> coordinates = new Vector<Integer>(2);
+		coordinates.add(x);
+		coordinates.add(y);
+		return coordinates;
 	}
 }

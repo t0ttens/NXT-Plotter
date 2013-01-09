@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -16,6 +17,7 @@ import javax.swing.JTextField;
 import nxt.lejos.imagetool.actions.AddVectorAction;
 import nxt.lejos.imagetool.actions.DeleteVectorAction;
 import nxt.lejos.imagetool.actions.InputKeyListener;
+import nxt.lejos.imagetool.actions.TestAction;
 import nxt.lejos.imagetool.model.Constants;
 
 public class ProgramFrame extends JFrame
@@ -33,20 +35,21 @@ public class ProgramFrame extends JFrame
 	private JTextField xInputField = new JTextField(5);
 	private JLabel yInputLabel = new JLabel("y");
 	private JTextField yInputField = new JTextField(5);
-	private JButton inputButton = new JButton("hinzufügen");
+	private JButton inputButton = new JButton("hinzufuegen");
 
 	//tablePanel
 	private TableContainer tablePanel = null;
 	
 	//optionPanel
 	private JPanel optionPanel = new JPanel();
-	private JButton deleteVectorButton = new JButton("Auswahl löschen");
+	private JButton deleteVectorButton = new JButton("Auswahl loeschen");
+	private JButton testButton = new JButton("Test");
 	
 	//leftPanel
 	private JPanel leftPanel = new JPanel();
 	
 	//graphicPanel
-	private JPanel graphicPanel = null;
+	private JComponent graphicPanel = null;
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -113,6 +116,8 @@ public class ProgramFrame extends JFrame
 		this.deleteVectorButton.addActionListener(new DeleteVectorAction());
 		this.deleteVectorButton.setEnabled(false);
 		this.optionPanel.add(this.deleteVectorButton);
+		this.testButton.addActionListener(new TestAction());
+		this.optionPanel.add(this.testButton);
 		
 		//leftPanel
 		this.leftPanel.setLayout(new BorderLayout());
@@ -121,7 +126,8 @@ public class ProgramFrame extends JFrame
 		this.leftPanel.add(this.optionPanel,BorderLayout.SOUTH);
 		
 		//graphicPanel
-		this.graphicPanel = GraphicContainer.getInstance();
+//		this.graphicPanel = GraphicContainer.getInstance();
+		this.graphicPanel = SimpleDrawComponent.getInstance();
 		
 		//ProgramFrame
 		this.add(this.leftPanel, BorderLayout.WEST);
@@ -146,7 +152,7 @@ public class ProgramFrame extends JFrame
 		catch (Exception e)
 		{
 			System.out.println(e);
-			JOptionPane.showMessageDialog(this, "Mindestens einer der Werte is kein gültiger Integer", "Fehler", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Mindestens einer der Werte is kein gueltiger Integer", "Fehler", JOptionPane.ERROR_MESSAGE);
 			return null;
 		}
 		
@@ -167,7 +173,7 @@ public class ProgramFrame extends JFrame
 	
 	public void clearInputFields()
 	{
-		//Texteingabefelder löschen
+		//Texteingabefelder loeschen
 		this.xInputField.setText("");
 		this.yInputField.setText("");
 		
