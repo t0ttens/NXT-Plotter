@@ -62,7 +62,7 @@ public class ProgramFrame extends JFrame
 		this.initContent();
 		
 		//TEST
-		this.tablePanel.fillList();
+		//this.tablePanel.fillList();
 		
 		this.pack();
 		this.setVisible(true);
@@ -151,7 +151,6 @@ public class ProgramFrame extends JFrame
 		}
 		catch (Exception e)
 		{
-			System.out.println(e);
 			JOptionPane.showMessageDialog(this, "Mindestens einer der Werte is kein gueltiger Integer", "Fehler", JOptionPane.ERROR_MESSAGE);
 			return null;
 		}

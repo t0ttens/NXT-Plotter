@@ -3,7 +3,6 @@ package nxt.lejos.imagetool.view;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.util.Vector;
 
 import javax.swing.JComponent;
@@ -41,35 +40,37 @@ public class SimpleDrawComponent extends JComponent
 		return instance;
 	}
 	
-	public void clear()
-	{
-		Graphics2D g2d = (Graphics2D) this.getGraphics();
-		g2d.clipRect(0, 0, this.getWidth(), this.getHeight());
-	}
-	
-	public void fetchData()
-	{
-		this.data = TableContainer.getInstance().getListItems();
-	}
-	
 	@Override
 	protected void paintComponent(Graphics g)
-	{
+	{	
 		super.paintComponent(g);
-		
-		Graphics2D g2d = (Graphics2D) this.getGraphics();
-		g2d.setColor(Color.RED);
+	
+		//Hole gesamte Tabelle
+		this.data = TableContainer.getInstance().getListItems();
 		
 		if (data != null)
 		{
+			g.setColor(Color.RED);
+			
 			for (int i=1; i<this.data.size(); i++)
 			{
-				int x1 = this.data.get(i-1).get(0);
-				int y1 = this.data.get(i-1).get(1);
-				int x2 = this.data.get(i).get(0);
-				int y2 = this.data.get(i).get(1);
+				int x1, y1, x2, y2;
 				
-				g2d.drawLine(x1, y1, x2, y2);
+				try
+				{
+					//Alle Werte definitiv auf Integer casten, Fehlerquelle!
+					x1 = Integer.parseInt("" + this.data.get(i-1).get(0));
+					y1 = Integer.parseInt("" + this.data.get(i-1).get(1));
+					x2 = Integer.parseInt("" + this.data.get(i).get(0));
+					y2 = Integer.parseInt("" + this.data.get(i).get(1));
+				}
+				catch (Exception e)
+				{
+					System.out.println("Fehlerhafter Tabelleneintrag: " + e);
+					return;
+				}
+				
+				g.drawLine(x1, y1, x2, y2);
 			}
 		}
 	}

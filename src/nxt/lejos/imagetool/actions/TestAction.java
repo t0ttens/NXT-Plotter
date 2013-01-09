@@ -25,8 +25,6 @@ public class TestAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		System.out.println("TestButton");
-		SimpleDrawComponent.getInstance().fetchData();
 		SimpleDrawComponent.getInstance().repaint();
 	}
 }

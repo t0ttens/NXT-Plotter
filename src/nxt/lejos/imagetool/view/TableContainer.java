@@ -33,6 +33,9 @@ public class TableContainer extends JScrollPane
 		this.vectorTable = new JTable(this.tableModel);
 		this.vectorTable.addFocusListener(new TableListener());
 		
+		//TEST
+		this.fillList();
+		
 		//JTable in das Scrollpane einsetzen
 		this.setViewportView(this.vectorTable);
 	}
@@ -53,6 +56,11 @@ public class TableContainer extends JScrollPane
 	public void addVectorToTable()
 	{
 		Vector<Integer> vectorToAdd = ProgramFrame.getInstance().getInputValues();
+		
+		if (vectorToAdd == null)
+		{
+			return;
+		}
 		
 		//ueberpruefe, ob eingegebener Punkt innerhalb des gueltigen Bereichs liegt
 		switch (Validator.validateVectorInput(vectorToAdd.get(0), vectorToAdd.get(1)))
@@ -100,11 +108,11 @@ public class TableContainer extends JScrollPane
 	
 	public void fillList()
 	{
-		for (int i=0; i<600; i++)
+		for (int i=0; i<700; i++)
 		{
 			Vector<Integer> pointToAdd = new Vector<Integer>(2);
 			pointToAdd.add(i);
-			pointToAdd.add(i);
+			pointToAdd.add((int) (200*Math.sin(i/(double) 8)+300));
 			
 			this.tableModel.addRow(pointToAdd);
 		}
