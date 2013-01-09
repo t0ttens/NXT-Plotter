@@ -10,12 +10,18 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import nxt.lejos.imagetool.actions.AddVectorAction;
-import nxt.lejos.imagetool.actions.DeleteVectorAction;
+import nxt.lejos.imagetool.actions.DeleteSelectionAction;
+import nxt.lejos.imagetool.actions.ExitAction;
+import nxt.lejos.imagetool.actions.ExportFileAction;
+import nxt.lejos.imagetool.actions.ImportFileAction;
 import nxt.lejos.imagetool.actions.InputKeyListener;
 import nxt.lejos.imagetool.actions.TestAction;
 import nxt.lejos.imagetool.model.Constants;
@@ -28,6 +34,15 @@ public class ProgramFrame extends JFrame
 
 	private static final long serialVersionUID = 1L;
 	private static ProgramFrame instance = null;
+	
+	//MenBar
+	private JMenuBar menuBar = new JMenuBar();
+	
+	private JMenu fileMenu = new JMenu("Datei");
+	private JMenu importExportMenu = new JMenu("Import/Export");
+	private JMenuItem importItem = new JMenuItem("importieren...");
+	private JMenuItem exportItem = new JMenuItem("exportieren...");
+	private JMenuItem exitItem = new JMenuItem("beenden");
 	
 	//inputPanel
 	private JPanel inputPanel = new JPanel();
@@ -59,10 +74,11 @@ public class ProgramFrame extends JFrame
 	{
 		this.initBehaviour();
 		this.initAppearance();
+		this.initMenuBar();
 		this.initContent();
 		
 		//TEST
-		//this.tablePanel.fillList();
+		this.tablePanel.fillList();
 		
 		this.pack();
 		this.setVisible(true);
@@ -95,6 +111,22 @@ public class ProgramFrame extends JFrame
 		this.setTitle("ImageTool " + Constants.version);
 	}
 	
+	private void initMenuBar()
+	{
+		this.menuBar.add(this.fileMenu);
+		this.fileMenu.add(this.importExportMenu);
+		this.importExportMenu.add(this.importItem);
+		this.importExportMenu.add(this.exportItem);
+		this.fileMenu.addSeparator();
+		this.fileMenu.add(this.exitItem);
+		
+		this.importItem.addActionListener(new ImportFileAction());
+		this.exportItem.addActionListener(new ExportFileAction());
+		this.exitItem.addActionListener(new ExitAction());
+		
+		this.setJMenuBar(this.menuBar);
+	}
+	
 	private void initContent()
 	{
 		//inputPanel
@@ -113,7 +145,7 @@ public class ProgramFrame extends JFrame
 		
 		//optionPanel
 		this.optionPanel.setLayout(new FlowLayout());
-		this.deleteVectorButton.addActionListener(new DeleteVectorAction());
+		this.deleteVectorButton.addActionListener(new DeleteSelectionAction());
 		this.deleteVectorButton.setEnabled(false);
 		this.optionPanel.add(this.deleteVectorButton);
 		this.testButton.addActionListener(new TestAction());
@@ -126,7 +158,6 @@ public class ProgramFrame extends JFrame
 		this.leftPanel.add(this.optionPanel,BorderLayout.SOUTH);
 		
 		//graphicPanel
-//		this.graphicPanel = GraphicContainer.getInstance();
 		this.graphicPanel = SimpleDrawComponent.getInstance();
 		
 		//ProgramFrame

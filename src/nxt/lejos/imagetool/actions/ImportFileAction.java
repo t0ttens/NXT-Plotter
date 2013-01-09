@@ -4,16 +4,14 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.imagetool.view.TableContainer;
-
-public class DeleteVectorAction extends AbstractAction
+public class ImportFileAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
 	private static final long serialVersionUID = 1L;
-	
+
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -21,10 +19,9 @@ public class DeleteVectorAction extends AbstractAction
 	//-----------------------------------------------------------------------------
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
-
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		TableContainer.getInstance().deleteSelectionFromTable();
 	}
 }

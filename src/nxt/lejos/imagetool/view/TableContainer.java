@@ -1,10 +1,14 @@
 package nxt.lejos.imagetool.view;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Vector;
 
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
 import nxt.lejos.imagetool.actions.TableListener;
@@ -35,9 +39,6 @@ public class TableContainer extends JScrollPane
 		this.tableModel.addTableModelListener(tableListener);
 		this.vectorTable = new JTable(this.tableModel);
 		this.vectorTable.addFocusListener(tableListener);
-		
-		//TEST
-		this.fillList();
 		
 		//JTable in das Scrollpane einsetzen
 		this.setViewportView(this.vectorTable);
@@ -105,17 +106,57 @@ public class TableContainer extends JScrollPane
 		return this.tableModel.getDataVector();
 	}
 	
+	public void exportListToFile()
+	{
+		@SuppressWarnings("unchecked")
+		Vector<Vector<Integer>> data = this.tableModel.getDataVector();
+		
+		JFileChooser chooser = new JFileChooser();
+		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
+		int returnVal = chooser.showSaveDialog(this);
+		
+		if (returnVal == JFileChooser.APPROVE_OPTION)
+		{
+			File exportFile = chooser.getSelectedFile();
+			System.out.println(exportFile.getName());
+			
+			FileWriter writer = null;
+			
+			try
+			{
+				writer = new FileWriter(exportFile);
+				
+				for (int i=0; i<data.size(); i++)
+				{
+					for (int j=0; j<data.get(i).size(); j++)
+					{
+						writer.write(data.get(i).get(j) + ";");
+					}
+					writer.write(System.getProperty("line.separator"));
+				}
+				
+				writer.flush();
+				writer.close();
+			}
+			catch (Exception e)
+			{
+				System.out.println("Speichern nicht möglich: " + e);
+			}
+			
+		}
+	}
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Test-Functions----------------------------------
 	//-----------------------------------------------------------------------------
 	
 	public void fillList()
 	{
-		for (int i=0; i<700; i++)
+		for (int i=0; i<14000; i++)
 		{
 			Vector<Integer> pointToAdd = new Vector<Integer>(2);
 			pointToAdd.add(i);
-			pointToAdd.add((int) (200*Math.sin(i/(double) 8)+300));
+			pointToAdd.add((int) (4000*Math.sin(i/(double) 100) + 6500));
 			
 			this.tableModel.addRow(pointToAdd);
 		}

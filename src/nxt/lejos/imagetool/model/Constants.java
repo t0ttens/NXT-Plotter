@@ -11,6 +11,8 @@ public interface Constants
 	public int yMin = 0;
 	public int yMax = 13000;
 	
+	public int scaleDivisor = 20;
+	
 	//Programmablauf
 	public enum ValidatorResults {TRUE, X_INVALID, Y_INVALID}
 }

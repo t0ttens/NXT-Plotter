@@ -7,6 +7,8 @@ import java.util.Vector;
 
 import javax.swing.JComponent;
 
+import nxt.lejos.imagetool.model.Constants;
+
 public class SimpleDrawComponent extends JComponent
 {
 	//-----------------------------------------------------------------------------
@@ -16,15 +18,13 @@ public class SimpleDrawComponent extends JComponent
 	private static final long serialVersionUID = 1L;
 	private static SimpleDrawComponent instance = null;
 	
-	private Vector<Vector<Integer>> data = null;
-	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
 
 	private SimpleDrawComponent()
 	{
-		this.setPreferredSize(new Dimension(700, 650));
+		this.setPreferredSize(new Dimension(Constants.xMax/Constants.scaleDivisor, Constants.yMax/Constants.scaleDivisor));
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -46,23 +46,23 @@ public class SimpleDrawComponent extends JComponent
 		super.paintComponent(g);
 	
 		//Hole gesamte Tabelle
-		this.data = TableContainer.getInstance().getListItems();
+		Vector<Vector<Integer>> data = TableContainer.getInstance().getListItems();
 		
 		if (data != null)
 		{
 			g.setColor(Color.RED);
 			
-			for (int i=1; i<this.data.size(); i++)
+			for (int i=1; i<data.size(); i++)
 			{
 				int x1, y1, x2, y2;
 				
 				try
 				{
 					//Alle Werte definitiv auf Integer casten, Fehlerquelle!
-					x1 = Integer.parseInt("" + this.data.get(i-1).get(0));
-					y1 = Integer.parseInt("" + this.data.get(i-1).get(1));
-					x2 = Integer.parseInt("" + this.data.get(i).get(0));
-					y2 = Integer.parseInt("" + this.data.get(i).get(1));
+					x1 = Integer.parseInt("" + data.get(i-1).get(0)) / Constants.scaleDivisor;
+					y1 = Integer.parseInt("" + data.get(i-1).get(1)) / Constants.scaleDivisor;
+					x2 = Integer.parseInt("" + data.get(i).get(0)) / Constants.scaleDivisor;
+					y2 = Integer.parseInt("" + data.get(i).get(1)) / Constants.scaleDivisor;
 				}
 				catch (Exception e)
 				{

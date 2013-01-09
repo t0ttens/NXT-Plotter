@@ -16,8 +16,6 @@ public class Controller
 
 	private Controller()
 	{
-		System.out.println("Controller startet");
-		
 		ProgramFrame.getInstance();
 	}
 	

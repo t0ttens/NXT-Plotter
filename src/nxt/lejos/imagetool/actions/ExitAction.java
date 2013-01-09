@@ -1,19 +1,16 @@
 package nxt.lejos.imagetool.actions;
 
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
+import java.awt.event.ActionEvent;
 
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
+import javax.swing.AbstractAction;
 
-import nxt.lejos.imagetool.view.ProgramFrame;
-import nxt.lejos.imagetool.view.SimpleDrawComponent;
-
-public class TableListener implements FocusListener, TableModelListener
+public class ExitAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
+
+	private static final long serialVersionUID = 1L;
 
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -24,21 +21,8 @@ public class TableListener implements FocusListener, TableModelListener
 	//-----------------------------------------------------------------------------
 	
 	@Override
-	public void focusGained(FocusEvent arg0)
+	public void actionPerformed(ActionEvent arg0)
 	{
-		ProgramFrame.getInstance().enableDeleteButton(true);
-	}
-
-	@Override
-	public void focusLost(FocusEvent arg0)
-	{
-		//geht leider nicht, weil der Button schon deaktiviert wird, bevor die Action aufgerufen wird
-		//ProgramFrame.getInstance().enableDeleteButton(false);
-	}
-
-	@Override
-	public void tableChanged(TableModelEvent arg0)
-	{
-		SimpleDrawComponent.getInstance().repaint();
+		System.exit(0);
 	}
 }
