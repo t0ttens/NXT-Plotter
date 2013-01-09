@@ -3,9 +3,13 @@ package nxt.lejos.imagetool.actions;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
-import nxt.lejos.imagetool.view.ProgramFrame;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 
-public class TableListener implements FocusListener
+import nxt.lejos.imagetool.view.ProgramFrame;
+import nxt.lejos.imagetool.view.SimpleDrawComponent;
+
+public class TableListener implements FocusListener, TableModelListener
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
@@ -29,5 +33,12 @@ public class TableListener implements FocusListener
 	public void focusLost(FocusEvent arg0)
 	{
 		
+	}
+
+	@Override
+	public void tableChanged(TableModelEvent arg0)
+	{
+		System.out.println("Tut er was?");
+		SimpleDrawComponent.getInstance().repaint();
 	}
 }

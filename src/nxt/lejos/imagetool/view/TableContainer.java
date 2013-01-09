@@ -29,9 +29,12 @@ public class TableContainer extends JScrollPane
 
 	private TableContainer()
 	{
+		TableListener tableListener = new TableListener();
+		
 		this.tableModel = new DefaultTableModel(this.columnNames, 0);
+		this.tableModel.addTableModelListener(tableListener);
 		this.vectorTable = new JTable(this.tableModel);
-		this.vectorTable.addFocusListener(new TableListener());
+		this.vectorTable.addFocusListener(tableListener);
 		
 		//TEST
 		this.fillList();
