@@ -46,7 +46,7 @@ public class ProgramFrame extends JFrame
 	
 	private JMenu machineMenu = new JMenu("Maschine");
 	private JMenuItem manualControlItem = new JMenuItem("Manuelle Steuerung");
-	private JMenuItem processListItem = new JMenuItem("Liste übergeben...");
+	private JMenuItem processListItem = new JMenuItem("Liste bearbeiten...");
 	
 	//inputPanel
 	private JPanel inputPanel = new JPanel();
