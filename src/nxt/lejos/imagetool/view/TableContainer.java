@@ -12,6 +12,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
 import nxt.lejos.imagetool.actions.TableListener;
+import nxt.lejos.imagetool.model.Constants;
 import nxt.lejos.imagetool.model.Validator;
 
 public class TableContainer extends JScrollPane
@@ -70,10 +71,12 @@ public class TableContainer extends JScrollPane
 		switch (Validator.validateVectorInput(vectorToAdd.get(0), vectorToAdd.get(1)))
 		{
 			case X_INVALID:
-				JOptionPane.showMessageDialog(this, "x-Wert außerhalb des gültigen Bereichs", "Fehler", JOptionPane.ERROR_MESSAGE);
+				String xError = "x-Wert ausserhalb des gueltigen Bereichs\n(" + Constants.xMin + " bis " + Constants.xMax + ")";
+				JOptionPane.showMessageDialog(this, xError, "Fehler", JOptionPane.ERROR_MESSAGE);
 				return;
 			case Y_INVALID:
-				JOptionPane.showMessageDialog(this, "y-Wert außerhalb des gültigen Bereichs", "Fehler", JOptionPane.ERROR_MESSAGE);
+				String yError = "y-Wert ausserhalb des gueltigen Bereichs\n(" + Constants.yMin + " bis " + Constants.yMax + ")";
+				JOptionPane.showMessageDialog(this, yError, "Fehler", JOptionPane.ERROR_MESSAGE);
 				return;
 			default:
 				break;
