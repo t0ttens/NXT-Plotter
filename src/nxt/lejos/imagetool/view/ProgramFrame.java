@@ -44,6 +44,10 @@ public class ProgramFrame extends JFrame
 	private JMenuItem exportItem = new JMenuItem("exportieren...");
 	private JMenuItem exitItem = new JMenuItem("beenden");
 	
+	private JMenu machineMenu = new JMenu("Maschine");
+	private JMenuItem manualControlItem = new JMenuItem("Manuelle Steuerung");
+	private JMenuItem processListItem = new JMenuItem("Liste übergeben...");
+	
 	//inputPanel
 	private JPanel inputPanel = new JPanel();
 	private JLabel xInputLabel = new JLabel("x");
@@ -119,10 +123,14 @@ public class ProgramFrame extends JFrame
 		this.importExportMenu.add(this.exportItem);
 		this.fileMenu.addSeparator();
 		this.fileMenu.add(this.exitItem);
-		
 		this.importItem.addActionListener(new ImportFileAction());
 		this.exportItem.addActionListener(new ExportFileAction());
 		this.exitItem.addActionListener(new ExitAction());
+		
+		this.menuBar.add(this.machineMenu);
+		this.machineMenu.add(this.manualControlItem);
+		this.machineMenu.addSeparator();
+		this.machineMenu.add(this.processListItem);
 		
 		this.setJMenuBar(this.menuBar);
 	}
