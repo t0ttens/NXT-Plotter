@@ -218,4 +218,10 @@ public class ProgramFrame extends JFrame
 		//Cursor wieder in x-Feld setzen
 		this.xInputField.requestFocus();
 	}
+	
+	public void showGraph(boolean b)
+	{
+		this.graphicPanel.setVisible(b);
+		this.pack();
+	}
 }
