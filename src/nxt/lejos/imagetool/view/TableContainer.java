@@ -1,6 +1,8 @@
 package nxt.lejos.imagetool.view;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Vector;
 
@@ -109,6 +111,51 @@ public class TableContainer extends JScrollPane
 		return this.tableModel.getDataVector();
 	}
 	
+	public void importFileToList()
+	{	
+		Vector<Vector<Integer>> importData = new Vector<Vector<Integer>>();
+		
+		JFileChooser chooser = new JFileChooser();
+		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
+		int returnVal = chooser.showOpenDialog(this);
+		
+		if(returnVal == JFileChooser.APPROVE_OPTION)
+		{
+			//Tabelleninhalt loeschen
+			this.tableModel.setRowCount(0);
+			
+			try {
+				File importFile = new File(chooser.getSelectedFile().getPath());
+				FileReader reader = new FileReader(importFile);
+				@SuppressWarnings("resource")
+				BufferedReader bufferedReader = new BufferedReader(reader);
+				
+				String line = "";
+				String[] splitLine;
+				
+				while (line != null)
+				{
+					line = bufferedReader.readLine();
+					splitLine = line.split(";");
+					
+					Vector<Integer> temp = new Vector<>(splitLine.length);
+					
+					for (int i=0; i<splitLine.length; i++)
+					{
+						temp.add(Integer.parseInt(splitLine[i]));
+					}
+					
+					importData.add(temp);
+				}
+//				while (line != null);
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public void exportListToFile()
 	{
 		@SuppressWarnings("unchecked")
@@ -119,9 +166,15 @@ public class TableContainer extends JScrollPane
 		int returnVal = chooser.showSaveDialog(this);
 		
 		if (returnVal == JFileChooser.APPROVE_OPTION)
-		{
-			File exportFile = chooser.getSelectedFile();
-			System.out.println(exportFile.getName());
+		{	
+			String path = chooser.getSelectedFile().getPath();
+			
+			if (!path.toLowerCase().endsWith(".csv"))
+			{
+				path = path + ".csv";
+			}
+				 
+			File exportFile = new File(path);
 			
 			FileWriter writer = null;
 			
@@ -131,11 +184,13 @@ public class TableContainer extends JScrollPane
 				
 				for (int i=0; i<data.size(); i++)
 				{
-					for (int j=0; j<data.get(i).size(); j++)
+					for (int j=0; j<data.get(i).size()-1; j++)
 					{
+						//Semikolon bis zum vorletzten Wert
 						writer.write(data.get(i).get(j) + ";");
 					}
-					writer.write(System.getProperty("line.separator"));
+					//Letztem Wert folgt ein Zeilenumbruch 
+					writer.write(data.get(i).get(data.get(i).size()-1) + System.getProperty("line.separator"));
 				}
 				
 				writer.flush();

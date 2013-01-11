@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
+import nxt.lejos.imagetool.view.TableContainer;
+
 public class ImportFileAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
@@ -23,5 +25,6 @@ public class ImportFileAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
+		TableContainer.getInstance().importFileToList();
 	}
 }
