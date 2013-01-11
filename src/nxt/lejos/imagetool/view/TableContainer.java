@@ -10,7 +10,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
 import nxt.lejos.imagetool.actions.TableListener;
@@ -116,7 +115,7 @@ public class TableContainer extends JScrollPane
 		Vector<Vector<Integer>> importData = new Vector<Vector<Integer>>();
 		
 		JFileChooser chooser = new JFileChooser();
-		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
+//		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
 		int returnVal = chooser.showOpenDialog(this);
 		
 		if(returnVal == JFileChooser.APPROVE_OPTION)
@@ -130,12 +129,18 @@ public class TableContainer extends JScrollPane
 				@SuppressWarnings("resource")
 				BufferedReader bufferedReader = new BufferedReader(reader);
 				
-				String line = "";
+				String line;
 				String[] splitLine;
 				
-				while (line != null)
+				while (true)
 				{
+					//Schleife laeuft bis zur letzten Zeile
 					line = bufferedReader.readLine();
+					if (line == null)
+					{
+						break;
+					}
+					
 					splitLine = line.split(";");
 					
 					Vector<Integer> temp = new Vector<>(splitLine.length);
@@ -147,8 +152,11 @@ public class TableContainer extends JScrollPane
 					
 					importData.add(temp);
 				}
-//				while (line != null);
 				
+				for (int i=0; i<importData.size(); i++)
+				{
+					this.tableModel.addRow(importData.get(i));
+				}
 				
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -162,7 +170,7 @@ public class TableContainer extends JScrollPane
 		Vector<Vector<Integer>> data = this.tableModel.getDataVector();
 		
 		JFileChooser chooser = new JFileChooser();
-		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
+//		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
 		int returnVal = chooser.showSaveDialog(this);
 		
 		if (returnVal == JFileChooser.APPROVE_OPTION)
