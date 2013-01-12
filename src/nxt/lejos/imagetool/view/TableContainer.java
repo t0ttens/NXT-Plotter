@@ -143,7 +143,7 @@ public class TableContainer extends JScrollPane
 					
 					splitLine = line.split(";");
 					
-					Vector<Integer> temp = new Vector<>(splitLine.length);
+					Vector<Integer> temp = new Vector<Integer>(splitLine.length);
 					
 					for (int i=0; i<splitLine.length; i++)
 					{
