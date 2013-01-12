@@ -50,7 +50,7 @@ public class SimpleDrawComponent extends JComponent
 		
 		if (data != null)
 		{
-			g.setColor(Color.RED);
+			g.setColor(Color.BLUE);
 			
 			for (int i=1; i<data.size(); i++)
 			{
