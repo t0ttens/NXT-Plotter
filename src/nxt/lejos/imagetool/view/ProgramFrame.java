@@ -7,7 +7,6 @@ import java.util.Vector;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -16,6 +15,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 
 import nxt.lejos.imagetool.actions.AddVectorAction;
 import nxt.lejos.imagetool.actions.DeleteSelectionAction;
@@ -55,9 +55,6 @@ public class ProgramFrame extends JFrame
 	private JLabel yInputLabel = new JLabel("y");
 	private JTextField yInputField = new JTextField(5);
 	private JButton inputButton = new JButton("hinzufuegen");
-
-	//tablePanel
-	private TableContainer tablePanel = null;
 	
 	//optionPanel
 	private JPanel optionPanel = new JPanel();
@@ -67,22 +64,28 @@ public class ProgramFrame extends JFrame
 	//leftPanel
 	private JPanel leftPanel = new JPanel();
 	
-	//graphicPanel
-	private JComponent graphicPanel = null;
-	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
 
 	private ProgramFrame()
 	{
+		try
+		{
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 		this.initBehaviour();
 		this.initAppearance();
 		this.initMenuBar();
 		this.initContent();
 		
 		//TEST
-		this.tablePanel.fillList();
+		TableContainer.getInstance().fillList();
 		
 		this.pack();
 		this.setVisible(true);
@@ -148,9 +151,6 @@ public class ProgramFrame extends JFrame
 		this.inputButton.addActionListener(new AddVectorAction());
 		this.inputPanel.add(this.inputButton);
 		
-		//tablePanel
-		this.tablePanel = TableContainer.getInstance();
-		
 		//optionPanel
 		this.optionPanel.setLayout(new FlowLayout());
 		this.deleteVectorButton.addActionListener(new DeleteSelectionAction());
@@ -162,21 +162,18 @@ public class ProgramFrame extends JFrame
 		//leftPanel
 		this.leftPanel.setLayout(new BorderLayout());
 		this.leftPanel.add(this.inputPanel, BorderLayout.NORTH);
-		this.leftPanel.add(this.tablePanel, BorderLayout.CENTER);
+		this.leftPanel.add(TableContainer.getInstance(), BorderLayout.CENTER);
 		this.leftPanel.add(this.optionPanel,BorderLayout.SOUTH);
-		
-		//graphicPanel
-		this.graphicPanel = SimpleDrawComponent.getInstance();
 		
 		//ProgramFrame
 		this.add(this.leftPanel, BorderLayout.WEST);
-		this.add(this.graphicPanel, BorderLayout.CENTER);
+		this.add(SimpleDrawComponent.getInstance(), BorderLayout.CENTER);
 		
 		//Umrandungen
 		this.inputPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
-		this.tablePanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+		TableContainer.getInstance().setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
 		this.optionPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
-		this.graphicPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+		SimpleDrawComponent.getInstance().setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
 	}
 	
 	public Vector<Integer> getInputValues()
@@ -221,7 +218,7 @@ public class ProgramFrame extends JFrame
 	
 	public void showGraph(boolean b)
 	{
-		this.graphicPanel.setVisible(b);
+		SimpleDrawComponent.getInstance().setVisible(b);
 		this.pack();
 	}
 }
