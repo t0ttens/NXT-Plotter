@@ -23,6 +23,7 @@ import nxt.lejos.imagetool.actions.ExitAction;
 import nxt.lejos.imagetool.actions.ExportFileAction;
 import nxt.lejos.imagetool.actions.ImportFileAction;
 import nxt.lejos.imagetool.actions.InputKeyListener;
+import nxt.lejos.imagetool.actions.ManualControlAction;
 import nxt.lejos.imagetool.actions.TestAction;
 import nxt.lejos.imagetool.model.Constants;
 
@@ -131,6 +132,7 @@ public class ProgramFrame extends JFrame
 		this.exitItem.addActionListener(new ExitAction());
 		
 		this.menuBar.add(this.machineMenu);
+		this.manualControlItem.addActionListener(new ManualControlAction());
 		this.machineMenu.add(this.manualControlItem);
 		this.machineMenu.addSeparator();
 		this.machineMenu.add(this.processListItem);
