@@ -69,16 +69,7 @@ public class ProgramFrame extends JFrame
 	//-----------------------------------------------------------------------------
 
 	private ProgramFrame()
-	{
-		try
-		{
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		
+	{	
 		this.initBehaviour();
 		this.initAppearance();
 		this.initMenuBar();
@@ -111,6 +102,15 @@ public class ProgramFrame extends JFrame
 	
 	private void initAppearance()
 	{
+		try
+		{
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 		this.setLocationByPlatform(true);
 		this.setSize(800, 600);
 		this.setResizable(false);
