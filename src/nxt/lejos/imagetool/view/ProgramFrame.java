@@ -27,6 +27,9 @@ import nxt.lejos.imagetool.actions.ManualControlAction;
 import nxt.lejos.imagetool.actions.TestAction;
 import nxt.lejos.imagetool.model.Constants;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ProgramFrame extends JFrame
 {
 	//-----------------------------------------------------------------------------
@@ -35,6 +38,9 @@ public class ProgramFrame extends JFrame
 
 	private static final long serialVersionUID = 1L;
 	private static ProgramFrame instance = null;
+	
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(ProgramFrame.class.getName());
 	
 	//MenBar
 	private JMenuBar menuBar = new JMenuBar();
@@ -71,6 +77,8 @@ public class ProgramFrame extends JFrame
 
 	private ProgramFrame()
 	{	
+		logger.debug("instanziiert");
+		
 		this.initBehaviour();
 		this.initAppearance();
 		this.initMenuBar();
@@ -216,11 +224,5 @@ public class ProgramFrame extends JFrame
 		
 		//Cursor wieder in x-Feld setzen
 		this.xInputField.requestFocus();
-	}
-	
-	public void showGraph(boolean b)
-	{
-		SimpleDrawComponent.getInstance().setVisible(b);
-		this.pack();
 	}
 }

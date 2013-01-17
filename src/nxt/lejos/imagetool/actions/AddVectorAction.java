@@ -6,6 +6,9 @@ import javax.swing.AbstractAction;
 
 import nxt.lejos.imagetool.view.TableContainer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class AddVectorAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
@@ -13,6 +16,9 @@ public class AddVectorAction extends AbstractAction
 	//-----------------------------------------------------------------------------
 
 	private static final long serialVersionUID = 1L;
+	
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(AddVectorAction.class.getName());
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -25,6 +31,7 @@ public class AddVectorAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
+		logger.debug("aufgerufen");
 		TableContainer.getInstance().addVectorToTable();
 	}
 }

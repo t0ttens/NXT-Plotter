@@ -16,6 +16,9 @@ import nxt.lejos.imagetool.actions.TableListener;
 import nxt.lejos.imagetool.model.Constants;
 import nxt.lejos.imagetool.model.Validator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class TableContainer extends JScrollPane
 {
 	//-----------------------------------------------------------------------------
@@ -24,6 +27,9 @@ public class TableContainer extends JScrollPane
 	
 	private static final long serialVersionUID = 1L;
 	private static TableContainer instance = null;
+	
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(TableContainer.class.getName());
 	
 	private String[] columnNames = {"x", "y"};
 	private DefaultTableModel tableModel = null;
@@ -35,6 +41,8 @@ public class TableContainer extends JScrollPane
 
 	private TableContainer()
 	{
+		logger.debug("instanziiert");
+		
 		TableListener tableListener = new TableListener();
 		
 		this.tableModel = new DefaultTableModel(this.columnNames, 0);

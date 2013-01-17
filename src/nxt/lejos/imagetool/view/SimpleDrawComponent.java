@@ -9,6 +9,9 @@ import javax.swing.JComponent;
 
 import nxt.lejos.imagetool.model.Constants;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class SimpleDrawComponent extends JComponent
 {
 	//-----------------------------------------------------------------------------
@@ -18,12 +21,17 @@ public class SimpleDrawComponent extends JComponent
 	private static final long serialVersionUID = 1L;
 	private static SimpleDrawComponent instance = null;
 	
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(SimpleDrawComponent.class.getName());
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
 
 	private SimpleDrawComponent()
 	{
+		logger.debug("SimpleDrawComponent instanziiert");
+		
 		this.setPreferredSize(new Dimension(Constants.xMax/Constants.scaleDivisor, Constants.yMax/Constants.scaleDivisor));
 	}
 	
