@@ -1,5 +1,10 @@
 package nxt.lejos.imagetool;
 
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import nxt.lejos.imagetool.controller.Controller;
 import nxt.lejos.imagetool.model.Constants;
 
@@ -14,6 +19,8 @@ public class ImageTool
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
+	
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -22,9 +29,11 @@ public class ImageTool
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-		System.out.println("ImageTool " + Constants.version + " startet");
+		Logger logger = LoggerFactory.getLogger(ImageTool.class.getName());
+		logger.debug("ImageTool " + Constants.version + " startet");
+
 		Controller.getInstance();
 	}
 }
