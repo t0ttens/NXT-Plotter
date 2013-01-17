@@ -18,11 +18,11 @@ public class Validator
 	
 	public static ValidatorResults validateVectorInput(int x, int y)
 	{
-		if (x < Constants.xMin || x > Constants.xMax)
+		if (x < Constants.XMIN || x > Constants.XMAX)
 		{	
 			return ValidatorResults.X_INVALID;
 		}
-		if (y < Constants.yMin || y > Constants.yMax)
+		if (y < Constants.YMIN || y > Constants.YMAX)
 		{
 			return ValidatorResults.Y_INVALID;
 		}

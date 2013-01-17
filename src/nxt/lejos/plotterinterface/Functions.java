@@ -24,6 +24,8 @@ public class Functions
 	
 	public static Vector<Vector<Integer>> calcPathData(Vector<Vector<Integer>> pathPoints)
 	{
+		logger.debug("Berechne Koordinaten und Geschwindigkeiten aus der Tabelle");
+		
 		Vector<Vector<Integer>> pathData = new Vector<Vector<Integer>>();
 		
 		int prevX;
@@ -53,7 +55,7 @@ public class Functions
 			currX = pathPoints.get(vector).get(0);
 			currY = pathPoints.get(vector).get(1);
 			
-			draw = pathPoints.get(vector).get(2);
+//			draw = pathPoints.get(vector).get(2);
 			
 			diffX = Math.abs(currX - prevX);
 			diffY = Math.abs(currY - prevY);
@@ -65,19 +67,23 @@ public class Functions
 			}
 			else if (diffX > diffY)
 			{
-				double quot = (double)diffY/diffX;
+				double quotDistance = (double)diffY/diffX;
 				speedX = 360;
-				speedY = (int)Math.round(360*quot);
+				speedY = (int)Math.round(360*quotDistance);
+				double quotSpeed = (double)speedY/speedX;
+				System.out.println("qD="+quotDistance+"\tqS="+quotSpeed);
 			}
 			else if (diffX < diffY)
 			{
-				double quot = (double)diffX/diffY;
+				double quotDistance = (double)diffX/diffY;
 				speedY = 360;
-				speedX = (int)Math.round(360*quot);
+				speedX = (int)Math.round(360*quotDistance);
+				double quotSpeed = (double)speedX/speedY;
+				System.out.println("qD="+quotDistance+"\tqS="+quotSpeed);
 			}
 			else
 			{
-				logger.error("diffX und diffY inkonsistent");
+				logger.error("diffX und diffY kaputt");
 				break;
 			}
 			
@@ -87,7 +93,7 @@ public class Functions
 			temp.add(currY);
 			temp.add(speedX);
 			temp.add(speedY);
-			temp.add(draw);
+//			temp.add(draw);
 			
 			//temp-Vektor in Pfaddaten-Vektor schreiben
 			pathData.add(temp);
@@ -116,4 +122,21 @@ public class Functions
 			MotorController.getInstance().moveToPoint(x, y, speedX, speedY);
 		}
 	}
+
+	//-----------------------------------------------------------------------------
+	//-----------------------------TEST-Methods/Functions--------------------------
+	//-----------------------------------------------------------------------------
+
+	public static void print2DVector(Vector<Vector<Integer>> vector)
+	{
+		for (int i=0; i<vector.size(); i++)
+		{
+			for (int j=0; j<vector.get(i).size(); j++)
+			{
+				System.out.print(vector.get(i).get(j) + " ");
+			}
+			System.out.println();
+		}
+	}
 }
+

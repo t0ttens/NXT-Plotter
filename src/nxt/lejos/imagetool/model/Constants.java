@@ -6,12 +6,12 @@ public interface Constants
 	public String version = "v0.1";
 	
 	//Dimensionen
-	public int xMin = 0;
-	public int xMax = 14000;
-	public int yMin = 0;
-	public int yMax = 13000;
+	public final int XMIN = 0;
+	public final int XMAX = 14000;
+	public final int YMIN = 0;
+	public final int YMAX = 13000;
 	
-	public int scaleDivisor = 20;
+	public final int SCALEDIVISOR = 20;
 	
 	//Programmablauf
 	public enum ValidatorResults {TRUE, X_INVALID, Y_INVALID}

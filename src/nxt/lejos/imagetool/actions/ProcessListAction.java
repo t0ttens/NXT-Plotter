@@ -5,11 +5,11 @@ import java.util.Vector;
 
 import javax.swing.AbstractAction;
 
+import nxt.lejos.imagetool.view.TableContainer;
+import nxt.lejos.plotterinterface.Functions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import nxt.lejos.imagetool.view.ProgramFrame;
-import nxt.lejos.plotterinterface.Functions;
 
 public class ProcessListAction extends AbstractAction
 {
@@ -34,5 +34,10 @@ public class ProcessListAction extends AbstractAction
 	public void actionPerformed(ActionEvent arg0)
 	{
 		logger.debug("aufgerufen");
+		
+		Vector<Vector<Integer>> tablePoints = TableContainer.getInstance().getListItems();
+		Vector<Vector<Integer>> pathData = Functions.calcPathData(tablePoints);
+		
+		Functions.print2DVector(pathData);
 	}
 }

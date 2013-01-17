@@ -31,8 +31,8 @@ public class SimpleDrawComponent extends JComponent
 	private SimpleDrawComponent()
 	{
 		logger.debug("instanziiert");
-		
-		this.setPreferredSize(new Dimension(Constants.xMax/Constants.scaleDivisor, Constants.yMax/Constants.scaleDivisor));
+
+		this.setPreferredSize(new Dimension(Constants.XMAX/Constants.SCALEDIVISOR, Constants.YMAX/Constants.SCALEDIVISOR));
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -52,7 +52,7 @@ public class SimpleDrawComponent extends JComponent
 	protected void paintComponent(Graphics g)
 	{	
 		super.paintComponent(g);
-	
+		
 		//Hole gesamte Tabelle
 		Vector<Vector<Integer>> data = TableContainer.getInstance().getListItems();
 		
@@ -67,10 +67,10 @@ public class SimpleDrawComponent extends JComponent
 				try
 				{
 					//Alle Werte definitiv auf Integer casten, Fehlerquelle!
-					x1 = Integer.parseInt("" + data.get(i-1).get(0)) / Constants.scaleDivisor;
-					y1 = Integer.parseInt("" + data.get(i-1).get(1)) / Constants.scaleDivisor;
-					x2 = Integer.parseInt("" + data.get(i).get(0)) / Constants.scaleDivisor;
-					y2 = Integer.parseInt("" + data.get(i).get(1)) / Constants.scaleDivisor;
+					x1 = Integer.parseInt("" + data.get(i-1).get(0)) / Constants.SCALEDIVISOR;
+					y1 = Integer.parseInt("" + data.get(i-1).get(1)) / Constants.SCALEDIVISOR;
+					x2 = Integer.parseInt("" + data.get(i).get(0)) / Constants.SCALEDIVISOR;
+					y2 = Integer.parseInt("" + data.get(i).get(1)) / Constants.SCALEDIVISOR;
 				}
 				catch (Exception e)
 				{
