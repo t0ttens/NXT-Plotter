@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.plotterinterface.MotorMovements;
+import nxt.lejos.plotterinterface.MotorController;
 
 public class ManualControlAction extends AbstractAction
 {
@@ -25,6 +25,6 @@ public class ManualControlAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		MotorMovements.getInstance();
+		MotorController.getInstance();
 	}
 }

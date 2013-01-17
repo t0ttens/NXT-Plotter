@@ -30,7 +30,7 @@ public class SimpleDrawComponent extends JComponent
 
 	private SimpleDrawComponent()
 	{
-		logger.debug("SimpleDrawComponent instanziiert");
+		logger.debug("instanziiert");
 		
 		this.setPreferredSize(new Dimension(Constants.xMax/Constants.scaleDivisor, Constants.yMax/Constants.scaleDivisor));
 	}

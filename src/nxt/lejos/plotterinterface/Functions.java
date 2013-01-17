@@ -1,0 +1,119 @@
+package nxt.lejos.plotterinterface;
+
+import java.util.Vector;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Functions
+{
+	//-----------------------------------------------------------------------------
+	//-----------------------------Variables---------------------------------------
+	//-----------------------------------------------------------------------------
+
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(Functions.class.getName());
+	
+	//-----------------------------------------------------------------------------
+	//-----------------------------Constructor(s)----------------------------------
+	//-----------------------------------------------------------------------------
+
+	//-----------------------------------------------------------------------------
+	//-----------------------------Methods/Functions-------------------------------
+	//-----------------------------------------------------------------------------
+	
+	public static Vector<Vector<Integer>> calcPathData(Vector<Vector<Integer>> pathPoints)
+	{
+		Vector<Vector<Integer>> pathData = new Vector<Vector<Integer>>();
+		
+		int prevX;
+		int prevY;
+		int currX;
+		int currY;
+		int diffX;
+		int diffY;
+		int speedX;
+		int speedY;
+		int draw;
+		
+		for (int vector=0; vector<pathPoints.size(); vector++)
+		{
+			//Fuer den ersten Punkt gibt es keinen vorherigen, dieser ist dann 0/0
+			if (vector == 0)
+			{
+				prevX = 0;
+				prevY = 0;
+			}
+			else
+			{
+				prevX = pathPoints.get(vector-1).get(0);
+				prevY = pathPoints.get(vector-1).get(1);
+			}
+			
+			currX = pathPoints.get(vector).get(0);
+			currY = pathPoints.get(vector).get(1);
+			
+			draw = pathPoints.get(vector).get(2);
+			
+			diffX = Math.abs(currX - prevX);
+			diffY = Math.abs(currY - prevY);
+			
+			if (diffX == diffY)
+			{
+				speedX = 360;
+				speedY = 360;
+			}
+			else if (diffX > diffY)
+			{
+				double quot = (double)diffY/diffX;
+				speedX = 360;
+				speedY = (int)Math.round(360*quot);
+			}
+			else if (diffX < diffY)
+			{
+				double quot = (double)diffX/diffY;
+				speedY = 360;
+				speedX = (int)Math.round(360*quot);
+			}
+			else
+			{
+				logger.error("diffX und diffY inkonsistent");
+				break;
+			}
+			
+			//Punktdaten in temp-Vektor schreiben
+			Vector<Integer> temp = new Vector<Integer>();
+			temp.add(currX);
+			temp.add(currY);
+			temp.add(speedX);
+			temp.add(speedY);
+			temp.add(draw);
+			
+			//temp-Vektor in Pfaddaten-Vektor schreiben
+			pathData.add(temp);
+		}
+		
+		return pathData;
+	}
+	
+	public static void doJob(Vector<Vector<Integer>> pathData)
+	{
+		//Startposition anfahren
+		MotorController.getInstance().moveToStartPosition();
+		
+		int x;
+		int y;
+		int speedX;
+		int speedY;
+		
+		for (int vector=0; vector<pathData.size(); vector++)
+		{
+			x = pathData.get(vector).get(0);
+			y = pathData.get(vector).get(1);
+			speedX = pathData.get(vector).get(2);
+			speedY = pathData.get(vector).get(3);
+			
+			MotorController.getInstance().moveToPoint(x, y, speedX, speedY);
+		}
+	}
+}
