@@ -145,7 +145,7 @@ public class TableContainer extends JScrollPane
 		if(returnVal == JFileChooser.APPROVE_OPTION)
 		{
 			//Tabelleninhalt loeschen
-			this.tableModel.setRowCount(0);
+			this.clearTable();
 			
 			try {
 				File importFile = new File(chooser.getSelectedFile().getPath());
@@ -230,18 +230,26 @@ public class TableContainer extends JScrollPane
 			}
 			catch (Exception e)
 			{
-				System.out.println("Speichern nicht möglich: " + e);
+				System.out.println("Speichern nicht mï¿½glich: " + e);
 			}
 			
 		}
+	}
+	
+	public void clearTable()
+	{
+		logger.debug("Tabelle wird geloescht");
+		this.tableModel.setRowCount(0);
 	}
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Test-Functions----------------------------------
 	//-----------------------------------------------------------------------------
 	
-	public void fillList()
+	public void generateSinus()
 	{
+		this.clearTable();
+		
 		for (int i=0; i<14000; i++)
 		{
 			Vector<Integer> pointToAdd = new Vector<Integer>(2);
@@ -249,6 +257,21 @@ public class TableContainer extends JScrollPane
 			pointToAdd.add((int) (4000*Math.sin(i/(double) 100) + 6500));
 			
 			this.tableModel.addRow(pointToAdd);
+		}
+	}
+	
+	public void generateRandomPoints()
+	{
+		this.clearTable();
+		
+		for (int i=0; i<10; i++)
+		{
+			Vector<Integer> testVector = new Vector<Integer>();
+			
+			testVector.add((int)(Math.random() * Constants.XMAX));
+			testVector.add((int)(Math.random() * Constants.YMAX));
+			
+			this.tableModel.addRow(testVector);
 		}
 	}
 }

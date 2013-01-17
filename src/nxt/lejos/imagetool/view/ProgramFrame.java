@@ -86,7 +86,7 @@ public class ProgramFrame extends JFrame
 		this.initContent();
 		
 		//TEST
-		TableContainer.getInstance().fillList();
+		TableContainer.getInstance().generateSinus();
 		
 		this.pack();
 		this.setVisible(true);
@@ -115,6 +115,7 @@ public class ProgramFrame extends JFrame
 		try
 		{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 		}
 		catch (Exception e)
 		{
@@ -125,7 +126,7 @@ public class ProgramFrame extends JFrame
 		this.setSize(800, 600);
 		this.setResizable(false);
 		this.setLayout(new BorderLayout());
-		this.setTitle("ImageTool " + Constants.VERSION);
+		this.setTitle(Constants.NAME + " " + Constants.VERSION);
 	}
 	
 	private void initMenuBar()
