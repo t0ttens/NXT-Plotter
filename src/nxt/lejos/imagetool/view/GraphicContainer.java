@@ -7,7 +7,7 @@ import java.awt.Graphics2D;
 
 import javax.swing.JComponent;
 
-import nxt.lejos.imagetool.model.Constants;
+import nxt.lejos.data.Constants;
 
 public class GraphicContainer extends JComponent
 {

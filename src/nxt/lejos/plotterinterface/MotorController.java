@@ -50,7 +50,7 @@ public class MotorController
 	
 	public void moveToPoint(int x, int y, int speedX, int speedY)
 	{
-		logger.info(x + "/" + y + "wird angefahren, Geschwindigkeit: " + speedX + "/" + speedY);
+		logger.info(x + "/" + y + " wird angefahren, Geschwindigkeit: " + speedX + "/" + speedY);
 	}
 	
 	public void draw(boolean b)
@@ -64,6 +64,7 @@ public class MotorController
 			else
 			{
 				logger.info("Zeichenvorrichtung wird abgesenkt");
+				isDrawing = true;
 			}
 		}
 		else
@@ -71,6 +72,7 @@ public class MotorController
 			if (isDrawing)
 			{
 				logger.info("Zeichenvorrichtung wird hochgefahren");
+				isDrawing = false;
 			}
 			else
 			{

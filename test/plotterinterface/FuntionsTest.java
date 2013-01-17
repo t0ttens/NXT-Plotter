@@ -1,14 +1,14 @@
 package plotterinterface;
 
-import static org.junit.Assert.*;
-import nxt.lejos.plotterinterface.Functions;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class FuntionsTest
 {
-	@Test public void calcPathDataTest() {
-	   //assert(Functions.calcPathData(pathPoints))
+	@Test
+	public void calcPathDataTest()
+	{
 		assertTrue(false);
 	}
 }

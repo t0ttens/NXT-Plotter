@@ -12,8 +12,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import nxt.lejos.data.Constants;
 import nxt.lejos.imagetool.actions.TableListener;
-import nxt.lejos.imagetool.model.Constants;
 import nxt.lejos.imagetool.model.Validator;
 
 import org.slf4j.Logger;
@@ -112,10 +112,26 @@ public class TableContainer extends JScrollPane
 		ProgramFrame.getInstance().enableDeleteButton(false);
 	}
 	
-	@SuppressWarnings("unchecked")
 	public Vector<Vector<Integer>> getListItems()
 	{
-		return this.tableModel.getDataVector();
+		@SuppressWarnings("unchecked")
+		Vector<Vector<Integer>> rawList = this.tableModel.getDataVector();
+		Vector<Vector<Integer>> listItems = new Vector<Vector<Integer>>();
+		
+		for (int i=0; i<rawList.size(); i++)
+		{
+			Vector<Integer> temp = new Vector<Integer>();
+			
+			for (int j=0; j<rawList.get(i).size(); j++)
+			{
+				int value = Integer.parseInt("" + rawList.get(i).get(j));
+				temp.add(value);
+			}
+			
+			listItems.add(temp);
+		}
+		
+		return listItems;
 	}
 	
 	public void importFileToList()

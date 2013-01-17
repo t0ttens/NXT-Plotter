@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import nxt.lejos.data.Constants;
 import nxt.lejos.imagetool.actions.AddVectorAction;
 import nxt.lejos.imagetool.actions.DeleteSelectionAction;
 import nxt.lejos.imagetool.actions.ExitAction;
@@ -26,7 +27,6 @@ import nxt.lejos.imagetool.actions.InputKeyListener;
 import nxt.lejos.imagetool.actions.ManualControlAction;
 import nxt.lejos.imagetool.actions.ProcessListAction;
 import nxt.lejos.imagetool.actions.TestAction;
-import nxt.lejos.imagetool.model.Constants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -125,7 +125,7 @@ public class ProgramFrame extends JFrame
 		this.setSize(800, 600);
 		this.setResizable(false);
 		this.setLayout(new BorderLayout());
-		this.setTitle("ImageTool " + Constants.version);
+		this.setTitle("ImageTool " + Constants.VERSION);
 	}
 	
 	private void initMenuBar()

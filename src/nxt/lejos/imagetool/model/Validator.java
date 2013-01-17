@@ -1,6 +1,7 @@
 package nxt.lejos.imagetool.model;
 
-import nxt.lejos.imagetool.model.Constants.ValidatorResults;
+import nxt.lejos.data.Constants;
+import nxt.lejos.data.Constants.ValidatorResults;
 
 public class Validator
 {

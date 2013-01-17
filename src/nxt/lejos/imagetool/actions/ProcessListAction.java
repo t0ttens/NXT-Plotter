@@ -38,6 +38,6 @@ public class ProcessListAction extends AbstractAction
 		Vector<Vector<Integer>> tablePoints = TableContainer.getInstance().getListItems();
 		Vector<Vector<Integer>> pathData = Functions.calcPathData(tablePoints);
 		
-		Functions.print2DVector(pathData);
+		Functions.doJob(pathData);
 	}
 }

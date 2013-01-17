@@ -22,6 +22,28 @@ public class Functions
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
 	
+	private static int[] calcSpeeds(int greaterDistance, int smallerDistance)
+	{
+		int[] speeds = new int[2];
+		
+		double quotDistance = (double)smallerDistance/greaterDistance;
+		
+		int greaterSpeed = 360;
+		int smallerSpeed = (int)Math.round(360*quotDistance);
+		
+		double quotSpeed = (double)smallerSpeed/greaterSpeed;
+		
+		if (quotDistance != quotSpeed)
+		{
+			System.out.println("qD="+quotDistance+"\tqS="+quotSpeed);
+		}
+		
+		speeds[0] = greaterSpeed;
+		speeds[1] = smallerSpeed;
+		
+		return speeds;
+	}
+	
 	public static Vector<Vector<Integer>> calcPathData(Vector<Vector<Integer>> pathPoints)
 	{
 		logger.debug("Berechne Koordinaten und Geschwindigkeiten aus der Tabelle");
@@ -36,7 +58,7 @@ public class Functions
 		int diffY;
 		int speedX;
 		int speedY;
-		int draw;
+//		int draw;
 		
 		for (int vector=0; vector<pathPoints.size(); vector++)
 		{
@@ -67,19 +89,15 @@ public class Functions
 			}
 			else if (diffX > diffY)
 			{
-				double quotDistance = (double)diffY/diffX;
-				speedX = 360;
-				speedY = (int)Math.round(360*quotDistance);
-				double quotSpeed = (double)speedY/speedX;
-				System.out.println("qD="+quotDistance+"\tqS="+quotSpeed);
+				int[] speeds = calcSpeeds(diffX, diffY);
+				speedX = speeds[0];
+				speedY = speeds[1];
 			}
 			else if (diffX < diffY)
 			{
-				double quotDistance = (double)diffX/diffY;
-				speedY = 360;
-				speedX = (int)Math.round(360*quotDistance);
-				double quotSpeed = (double)speedX/speedY;
-				System.out.println("qD="+quotDistance+"\tqS="+quotSpeed);
+				int[] speeds = calcSpeeds(diffY, diffX);
+				speedY = speeds[0];
+				speedX = speeds[1];
 			}
 			else
 			{
@@ -112,6 +130,8 @@ public class Functions
 		int speedX;
 		int speedY;
 		
+		MotorController.getInstance().draw(true);
+		
 		for (int vector=0; vector<pathData.size(); vector++)
 		{
 			x = pathData.get(vector).get(0);
@@ -121,6 +141,10 @@ public class Functions
 			
 			MotorController.getInstance().moveToPoint(x, y, speedX, speedY);
 		}
+		
+		MotorController.getInstance().draw(false);
+		
+		MotorController.getInstance().moveToStartPosition();
 	}
 
 	//-----------------------------------------------------------------------------

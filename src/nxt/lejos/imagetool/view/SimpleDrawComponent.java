@@ -7,7 +7,7 @@ import java.util.Vector;
 
 import javax.swing.JComponent;
 
-import nxt.lejos.imagetool.model.Constants;
+import nxt.lejos.data.Constants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,7 +58,7 @@ public class SimpleDrawComponent extends JComponent
 		
 		if (data != null)
 		{
-			g.setColor(Color.BLUE);
+			g.setColor(Color.GREEN);
 			
 			for (int i=1; i<data.size(); i++)
 			{
@@ -66,11 +66,10 @@ public class SimpleDrawComponent extends JComponent
 				
 				try
 				{
-					//Alle Werte definitiv auf Integer casten, Fehlerquelle!
-					x1 = Integer.parseInt("" + data.get(i-1).get(0)) / Constants.SCALEDIVISOR;
-					y1 = Integer.parseInt("" + data.get(i-1).get(1)) / Constants.SCALEDIVISOR;
-					x2 = Integer.parseInt("" + data.get(i).get(0)) / Constants.SCALEDIVISOR;
-					y2 = Integer.parseInt("" + data.get(i).get(1)) / Constants.SCALEDIVISOR;
+					x1 = data.get(i-1).get(0) / Constants.SCALEDIVISOR;
+					y1 = data.get(i-1).get(1) / Constants.SCALEDIVISOR;
+					x2 = data.get(i).get(0) / Constants.SCALEDIVISOR;
+					y2 = data.get(i).get(1) / Constants.SCALEDIVISOR;
 				}
 				catch (Exception e)
 				{

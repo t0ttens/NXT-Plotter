@@ -1,7 +1,7 @@
-package nxt.lejos.imagetool;
+package nxt.lejos;
 
+import nxt.lejos.data.Constants;
 import nxt.lejos.imagetool.controller.Controller;
-import nxt.lejos.imagetool.model.Constants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,13 +11,13 @@ import org.slf4j.LoggerFactory;
  * 2013
  */
 
-public class ImageTool
+public class MainClass
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 	
-	private static final Logger logger = LoggerFactory.getLogger(ImageTool.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MainClass.class.getName());
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -31,7 +31,7 @@ public class ImageTool
 	{
 //		StatusPrinter.print((LoggerContext) LoggerFactory.getILoggerFactory());
 		
-		logger.info("ImageTool " + Constants.version + " startet");
+		logger.info(Constants.NAME + " " + Constants.VERSION + " startet");
 		Controller.getInstance();
 	}
 }

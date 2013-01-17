@@ -1,9 +1,10 @@
-package nxt.lejos.imagetool.model;
+package nxt.lejos.data;
 
 public interface Constants
 {
 	//Version
-	public String version = "v0.1";
+	public final String NAME = "NXT-Plotter";
+	public final String VERSION = "v0.1";
 	
 	//Dimensionen
 	public final int XMIN = 0;
