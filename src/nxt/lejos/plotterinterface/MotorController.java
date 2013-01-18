@@ -135,4 +135,44 @@ public class MotorController
 			}
 		}
 	}
+	
+	public void moveLeftUp(boolean b)
+	{
+		logger.info("Motor faehrt nach links oben");
+	}
+	
+	public void moveUp(boolean b)
+	{
+		logger.info("Motor faehrt nach oben");
+	}
+	
+	public void moveRightUp(boolean b)
+	{
+		logger.info("Motor faehrt nach rechts oben");
+	}
+	
+	public void moveLeft(boolean b)
+	{
+		logger.info("Motor faehrt nach links");
+	}
+	
+	public void moveRight(boolean b)
+	{
+		logger.info("Motor faehrt nach rechts");
+	}
+	
+	public void moveLeftDown(boolean b)
+	{
+		logger.info("Motor faehrt nach links unten");
+	}
+	
+	public void moveDown(boolean b)
+	{
+		logger.info("Motor faehrt nach unten");
+	}
+	
+	public void moveRightDown(boolean b)
+	{
+		logger.info("Motor faehrt nach rechts unten");
+	}
 }

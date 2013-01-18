@@ -1,12 +1,12 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.menubar;
 
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.imagetool.view.TableContainer;
+import nxt.lejos.imagetool.view.components.TableContainer;
 
-public class ImportFileAction extends AbstractAction
+public class ExportFileAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
@@ -25,6 +25,6 @@ public class ImportFileAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		TableContainer.getInstance().importFileToList();
+		TableContainer.getInstance().exportListToFile();
 	}
 }

@@ -1,15 +1,17 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.menubar;
 
 import java.awt.event.ActionEvent;
+import java.util.Vector;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.imagetool.view.TableContainer;
+import nxt.lejos.imagetool.view.components.TableContainer;
+import nxt.lejos.plotterinterface.Functions;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class AddVectorAction extends AbstractAction
+public class ProcessListAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
@@ -18,7 +20,7 @@ public class AddVectorAction extends AbstractAction
 	private static final long serialVersionUID = 1L;
 	
 	//Logger
-	private static final Logger logger = LoggerFactory.getLogger(AddVectorAction.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(ProcessListAction.class.getName());
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -32,6 +34,10 @@ public class AddVectorAction extends AbstractAction
 	public void actionPerformed(ActionEvent arg0)
 	{
 		logger.debug("aufgerufen");
-		TableContainer.getInstance().addVectorToTable();
+		
+		Vector<Vector<Integer>> tablePoints = TableContainer.getInstance().getListItems();
+		Vector<Vector<Integer>> pathData = Functions.calcPathData(tablePoints);
+		
+		Functions.doJob(pathData);
 	}
 }

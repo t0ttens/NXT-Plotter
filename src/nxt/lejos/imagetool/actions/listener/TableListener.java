@@ -1,4 +1,4 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.listener;
 
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -7,7 +7,7 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 
 import nxt.lejos.imagetool.view.ProgramFrame;
-import nxt.lejos.imagetool.view.SimpleDrawComponent;
+import nxt.lejos.imagetool.view.components.SimpleDrawComponent;
 
 public class TableListener implements FocusListener, TableModelListener
 {

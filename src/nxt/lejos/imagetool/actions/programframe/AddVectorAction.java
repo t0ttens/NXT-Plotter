@@ -1,18 +1,24 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.programframe;
 
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.plotterinterface.MotorController;
+import nxt.lejos.imagetool.view.components.TableContainer;
 
-public class ManualControlAction extends AbstractAction
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class AddVectorAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
 	private static final long serialVersionUID = 1L;
+	
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(AddVectorAction.class.getName());
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -25,6 +31,7 @@ public class ManualControlAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		MotorController.getInstance();
+		logger.debug("aufgerufen");
+		TableContainer.getInstance().addVectorToTable();
 	}
 }

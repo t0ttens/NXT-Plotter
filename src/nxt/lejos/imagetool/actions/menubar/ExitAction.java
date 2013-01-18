@@ -1,15 +1,16 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.menubar;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.ActionEvent;
 
-import nxt.lejos.imagetool.view.TableContainer;
+import javax.swing.AbstractAction;
 
-public class InputKeyListener implements KeyListener
+public class ExitAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
+
+	private static final long serialVersionUID = 1L;
 
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -18,25 +19,10 @@ public class InputKeyListener implements KeyListener
 	//-----------------------------------------------------------------------------
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
-
+	
 	@Override
-	public void keyPressed(KeyEvent e)
+	public void actionPerformed(ActionEvent arg0)
 	{
-		if (e.getKeyCode() == KeyEvent.VK_ENTER)
-		{
-			TableContainer.getInstance().addVectorToTable();
-		}
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e)
-	{
-
-	}
-
-	@Override
-	public void keyTyped(KeyEvent e)
-	{
-		
+		System.exit(0);
 	}
 }

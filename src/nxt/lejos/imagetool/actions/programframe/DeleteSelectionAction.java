@@ -1,19 +1,25 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.programframe;
 
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.imagetool.view.TableContainer;
+import nxt.lejos.imagetool.view.components.TableContainer;
 
-public class ExportFileAction extends AbstractAction
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class DeleteSelectionAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
 	private static final long serialVersionUID = 1L;
-
+	
+	//Logger
+	private static final Logger logger = LoggerFactory.getLogger(DeleteSelectionAction.class.getName());
+	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -21,10 +27,11 @@ public class ExportFileAction extends AbstractAction
 	//-----------------------------------------------------------------------------
 	//-----------------------------Methods/Functions-------------------------------
 	//-----------------------------------------------------------------------------
-	
+
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		TableContainer.getInstance().exportListToFile();
+		logger.debug("aufgerufen");
+		TableContainer.getInstance().deleteSelectionFromTable();
 	}
 }

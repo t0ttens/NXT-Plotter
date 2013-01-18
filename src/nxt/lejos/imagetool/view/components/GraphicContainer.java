@@ -1,4 +1,4 @@
-package nxt.lejos.imagetool.view;
+package nxt.lejos.imagetool.view.components;
 
 import java.awt.Color;
 import java.awt.Dimension;

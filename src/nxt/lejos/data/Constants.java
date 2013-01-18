@@ -1,5 +1,8 @@
 package nxt.lejos.data;
 
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
+
 public interface Constants
 {
 	//Version
@@ -14,6 +17,10 @@ public interface Constants
 	
 	public final int SCALEDIVISOR = 20;
 	
+	//Grafik
+	public final Border preferedBorderType = BorderFactory.createEtchedBorder();
+	
 	//Programmablauf
 	public enum ValidatorResults {TRUE, X_INVALID, Y_INVALID}
+	public enum MotorDirections {LEFT_UP, UP, RIGHT_UP, LEFT, RIGHT, LEFT_DOWN, DOWN, RIGHT_DOWN}
 }

@@ -1,11 +1,9 @@
 package nxt.lejos.imagetool.view;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.FlowLayout;
 import java.util.Vector;
 
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,15 +16,17 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 import nxt.lejos.data.Constants;
-import nxt.lejos.imagetool.actions.AddVectorAction;
-import nxt.lejos.imagetool.actions.DeleteSelectionAction;
-import nxt.lejos.imagetool.actions.ExitAction;
-import nxt.lejos.imagetool.actions.ExportFileAction;
-import nxt.lejos.imagetool.actions.ImportFileAction;
-import nxt.lejos.imagetool.actions.InputKeyListener;
-import nxt.lejos.imagetool.actions.ManualControlAction;
-import nxt.lejos.imagetool.actions.ProcessListAction;
-import nxt.lejos.imagetool.actions.TestAction;
+import nxt.lejos.imagetool.actions.listener.InputKeyListener;
+import nxt.lejos.imagetool.actions.menubar.ExitAction;
+import nxt.lejos.imagetool.actions.menubar.ExportFileAction;
+import nxt.lejos.imagetool.actions.menubar.ImportFileAction;
+import nxt.lejos.imagetool.actions.menubar.ManualControlAction;
+import nxt.lejos.imagetool.actions.menubar.ProcessListAction;
+import nxt.lejos.imagetool.actions.programframe.AddVectorAction;
+import nxt.lejos.imagetool.actions.programframe.DeleteSelectionAction;
+import nxt.lejos.imagetool.actions.programframe.TestAction;
+import nxt.lejos.imagetool.view.components.SimpleDrawComponent;
+import nxt.lejos.imagetool.view.components.TableContainer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -86,6 +86,7 @@ public class ProgramFrame extends JFrame
 		this.initContent();
 		
 		this.pack();
+		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
 	
@@ -105,25 +106,24 @@ public class ProgramFrame extends JFrame
 	private void initBehaviour()
 	{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
 	}
 	
 	private void initAppearance()
 	{
+		this.setTitle(Constants.NAME);
+		
+		//Look and Feel
 		try
 		{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-//			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
 		
-		this.setLocationByPlatform(true);
-		this.setSize(800, 600);
-		this.setResizable(false);
 		this.setLayout(new BorderLayout());
-		this.setTitle(Constants.NAME + " " + Constants.VERSION);
 	}
 	
 	private void initMenuBar()
@@ -179,11 +179,11 @@ public class ProgramFrame extends JFrame
 		this.add(this.leftPanel, BorderLayout.WEST);
 		this.add(SimpleDrawComponent.getInstance(), BorderLayout.CENTER);
 		
-		//Umrandungen
-		this.inputPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
-		TableContainer.getInstance().setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
-		this.optionPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
-		SimpleDrawComponent.getInstance().setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+		//Border
+		this.inputPanel.setBorder(Constants.preferedBorderType);
+		TableContainer.getInstance().setBorder(Constants.preferedBorderType);
+		this.optionPanel.setBorder(Constants.preferedBorderType);
+		SimpleDrawComponent.getInstance().setBorder(Constants.preferedBorderType);
 	}
 	
 	public Vector<Integer> getInputValues()

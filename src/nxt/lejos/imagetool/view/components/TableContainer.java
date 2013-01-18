@@ -1,4 +1,4 @@
-package nxt.lejos.imagetool.view;
+package nxt.lejos.imagetool.view.components;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,8 +13,9 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import nxt.lejos.data.Constants;
-import nxt.lejos.imagetool.actions.TableListener;
+import nxt.lejos.imagetool.actions.listener.TableListener;
 import nxt.lejos.imagetool.model.Validator;
+import nxt.lejos.imagetool.view.ProgramFrame;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

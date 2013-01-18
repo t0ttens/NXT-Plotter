@@ -1,26 +1,18 @@
-package nxt.lejos.imagetool.actions;
+package nxt.lejos.imagetool.actions.menubar;
 
 import java.awt.event.ActionEvent;
-import java.util.Vector;
 
 import javax.swing.AbstractAction;
 
-import nxt.lejos.imagetool.view.TableContainer;
-import nxt.lejos.plotterinterface.Functions;
+import nxt.lejos.imagetool.view.ManualControlFrame;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-public class ProcessListAction extends AbstractAction
+public class ManualControlAction extends AbstractAction
 {
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
 
 	private static final long serialVersionUID = 1L;
-	
-	//Logger
-	private static final Logger logger = LoggerFactory.getLogger(ProcessListAction.class.getName());
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -33,11 +25,6 @@ public class ProcessListAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		logger.debug("aufgerufen");
-		
-		Vector<Vector<Integer>> tablePoints = TableContainer.getInstance().getListItems();
-		Vector<Vector<Integer>> pathData = Functions.calcPathData(tablePoints);
-		
-		Functions.doJob(pathData);
+		new ManualControlFrame();
 	}
 }
