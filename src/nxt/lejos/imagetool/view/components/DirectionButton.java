@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 
+import nxt.lejos.data.Constants;
 import nxt.lejos.data.Constants.MotorDirections;
 import nxt.lejos.plotterinterface.MotorController;
 
@@ -18,7 +19,7 @@ public class DirectionButton extends JButton
 	private static final long serialVersionUID = 1L;
 	
 	private MotorDirections direction = null;
-	private final int fontSize = 50;
+	private int fontSize = 0;
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -27,6 +28,7 @@ public class DirectionButton extends JButton
 	public DirectionButton(MotorDirections direction)
 	{
 		this.direction = direction;
+		this.fontSize = Constants.ARROW_FONT_SIZE;
 		this.setFontSize();
 		this.setArrowIcon();
 		this.initAction();

@@ -81,11 +81,11 @@ public class TableContainer extends JScrollPane
 		switch (Validator.validateVectorInput(vectorToAdd.get(0), vectorToAdd.get(1)))
 		{
 			case X_INVALID:
-				String xError = "x-Wert ausserhalb des gueltigen Bereichs\n(" + Constants.XMIN + " bis " + Constants.XMAX + ")";
+				String xError = "x-Wert ausserhalb des gueltigen Bereichs\n(" + Constants.X_MIN + " bis " + Constants.X_MAX + ")";
 				JOptionPane.showMessageDialog(this, xError, "Fehler", JOptionPane.ERROR_MESSAGE);
 				return;
 			case Y_INVALID:
-				String yError = "y-Wert ausserhalb des gueltigen Bereichs\n(" + Constants.YMIN + " bis " + Constants.YMAX + ")";
+				String yError = "y-Wert ausserhalb des gueltigen Bereichs\n(" + Constants.Y_MIN + " bis " + Constants.Y_MAX + ")";
 				JOptionPane.showMessageDialog(this, yError, "Fehler", JOptionPane.ERROR_MESSAGE);
 				return;
 			default:
@@ -269,8 +269,8 @@ public class TableContainer extends JScrollPane
 		{
 			Vector<Integer> testVector = new Vector<Integer>();
 			
-			testVector.add((int)(Math.random() * Constants.XMAX));
-			testVector.add((int)(Math.random() * Constants.YMAX));
+			testVector.add((int)(Math.random() * Constants.X_MAX));
+			testVector.add((int)(Math.random() * Constants.Y_MAX));
 			
 			this.tableModel.addRow(testVector);
 		}

@@ -180,10 +180,10 @@ public class ProgramFrame extends JFrame
 		this.add(SimpleDrawComponent.getInstance(), BorderLayout.CENTER);
 		
 		//Border
-		this.inputPanel.setBorder(Constants.preferedBorderType);
-		TableContainer.getInstance().setBorder(Constants.preferedBorderType);
-		this.optionPanel.setBorder(Constants.preferedBorderType);
-		SimpleDrawComponent.getInstance().setBorder(Constants.preferedBorderType);
+		this.inputPanel.setBorder(Constants.PREFERED_BORDER_TYPE);
+		TableContainer.getInstance().setBorder(Constants.PREFERED_BORDER_TYPE);
+		this.optionPanel.setBorder(Constants.PREFERED_BORDER_TYPE);
+		SimpleDrawComponent.getInstance().setBorder(Constants.PREFERED_BORDER_TYPE);
 	}
 	
 	public Vector<Integer> getInputValues()

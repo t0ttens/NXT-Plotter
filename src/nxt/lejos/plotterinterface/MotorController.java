@@ -2,6 +2,8 @@ package nxt.lejos.plotterinterface;
 
 import lejos.nxt.Motor;
 
+import nxt.lejos.data.Constants;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +23,7 @@ public class MotorController
 	//Logger
 	private static final Logger logger = LoggerFactory.getLogger(MotorController.class.getName());
 	
+	private boolean dummyMode = false;
 	private boolean isDrawing = false;
 	
 	private int xPos = 0;
@@ -31,8 +34,14 @@ public class MotorController
 	//-----------------------------------------------------------------------------
 
 	private MotorController()
-	{
+	{		
 		logger.debug("instanziiert");
+		
+		this.dummyMode = Constants.DUMMY_MODE;
+		if (this.dummyMode)
+		{
+			logger.info("Dummy-Modus");
+		}
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -58,6 +67,11 @@ public class MotorController
 	{
 		this.yPos = Motor.B.getTachoCount();
 		return this.yPos;
+	}
+	
+	public boolean isDrawing()
+	{
+		return this.isDrawing;
 	}
 	
 	public void moveToStartPosition()

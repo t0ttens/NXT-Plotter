@@ -3,7 +3,9 @@ package nxt.lejos.imagetool.view;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 
+import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
@@ -13,6 +15,7 @@ import javax.swing.JPanel;
 import nxt.lejos.data.Constants;
 import nxt.lejos.data.Constants.MotorDirections;
 import nxt.lejos.imagetool.view.components.DirectionButton;
+import nxt.lejos.plotterinterface.MotorController;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,7 +55,7 @@ public class ManualControlFrame extends JDialog
 
 	public ManualControlFrame()
 	{
-		logger.info("instanziiert");
+		logger.debug("instanziiert");
 		
 		this.initBehaviour();
 		this.initAppearance();
@@ -104,12 +107,27 @@ public class ManualControlFrame extends JDialog
 		this.controlPanel.setLayout(new FlowLayout());
 		
 		this.controlPanel.add(this.startPosButton);
+		
+		//DrawCheckBox-Actionlistener
 		this.controlPanel.add(this.drawCheckBox);
+		this.drawCheckBox.addActionListener(new AbstractAction()
+		{
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			public void actionPerformed(ActionEvent arg0)
+			{
+				//draw() erhaelt direkt den isSelected-boolan der CheckBox, sodass der Stift hoch- oder heruntergefahren wird
+				MotorController.getInstance().draw(drawCheckBox.isSelected());
+			}
+		});
+		//Ueberpfuefe Position der Malvorrichtung und setze CheckBox entsprechend
+		this.drawCheckBox.setSelected(MotorController.getInstance().isDrawing());
 		
 		this.add(this.controlPanel, BorderLayout.SOUTH);
 		
 		//Border
-		this.buttonPanel.setBorder(Constants.preferedBorderType);
-		this.controlPanel.setBorder(Constants.preferedBorderType);
+		this.buttonPanel.setBorder(Constants.PREFERED_BORDER_TYPE);
+		this.controlPanel.setBorder(Constants.PREFERED_BORDER_TYPE);
 	}
 }

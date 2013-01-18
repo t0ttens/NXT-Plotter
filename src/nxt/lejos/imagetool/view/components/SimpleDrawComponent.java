@@ -23,6 +23,9 @@ public class SimpleDrawComponent extends JComponent
 	
 	//Logger
 	private static final Logger logger = LoggerFactory.getLogger(SimpleDrawComponent.class.getName());
+
+	private int xMaxScaled = 0;
+	private int yMaxScaled = 0;
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -32,7 +35,10 @@ public class SimpleDrawComponent extends JComponent
 	{
 		logger.debug("instanziiert");
 
-		this.setPreferredSize(new Dimension(Constants.XMAX/Constants.SCALEDIVISOR, Constants.YMAX/Constants.SCALEDIVISOR));
+		this.xMaxScaled = Constants.X_MAX/Constants.GRAPH_SCALE_DIVISOR;
+		this.yMaxScaled = Constants.Y_MAX/Constants.GRAPH_SCALE_DIVISOR;
+		
+		this.setPreferredSize(new Dimension(this.xMaxScaled, this.yMaxScaled));
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -58,6 +64,10 @@ public class SimpleDrawComponent extends JComponent
 		
 		if (data != null)
 		{
+			//Umrandung
+			g.setColor(Color.BLACK);
+			g.drawRect(0, 0, this.xMaxScaled, this.yMaxScaled);
+			
 			g.setColor(Color.RED);
 			
 			for (int i=1; i<data.size(); i++)
@@ -66,10 +76,10 @@ public class SimpleDrawComponent extends JComponent
 				
 				try
 				{
-					x1 = data.get(i-1).get(0) / Constants.SCALEDIVISOR;
-					y1 = data.get(i-1).get(1) / Constants.SCALEDIVISOR;
-					x2 = data.get(i).get(0) / Constants.SCALEDIVISOR;
-					y2 = data.get(i).get(1) / Constants.SCALEDIVISOR;
+					x1 = data.get(i-1).get(0) / Constants.GRAPH_SCALE_DIVISOR;
+					y1 = data.get(i-1).get(1) / Constants.GRAPH_SCALE_DIVISOR;
+					x2 = data.get(i).get(0) / Constants.GRAPH_SCALE_DIVISOR;
+					y2 = data.get(i).get(1) / Constants.GRAPH_SCALE_DIVISOR;
 				}
 				catch (Exception e)
 				{

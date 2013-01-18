@@ -21,8 +21,8 @@ public class GraphicContainer extends JComponent
 	private int borderWidth = 30;
 	private int scaleLines = 10;
 	private int scale = 20;
-	private int xMax = Constants.XMAX / this.scale;
-	private int yMax = Constants.YMAX / this.scale;
+	private int xMax = Constants.X_MAX / this.scale;
+	private int yMax = Constants.Y_MAX / this.scale;
 	
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
@@ -70,12 +70,12 @@ public class GraphicContainer extends JComponent
 	{
 		Graphics graphics = this.getGraphics();
 		graphics.drawLine(this.borderWidth, this.borderWidth, xMax+this.borderWidth, this.borderWidth);
-		for (int i=0; i<=this.xMax; i=i+this.xMax/(Constants.XMAX/1000))
+		for (int i=0; i<=this.xMax; i=i+this.xMax/(Constants.X_MAX/1000))
 		{
 			graphics.drawLine(this.borderWidth+i, this.borderWidth, this.borderWidth+i, this.borderWidth-this.scaleLines);
 		}
 		graphics.drawLine(this.borderWidth, this.borderWidth, this.borderWidth, this.borderWidth+yMax);
-		for (int i=0; i<=this.yMax; i=i+this.yMax/(Constants.YMAX/1000))
+		for (int i=0; i<=this.yMax; i=i+this.yMax/(Constants.Y_MAX/1000))
 		{
 			graphics.drawLine(this.borderWidth, i+this.borderWidth, this.borderWidth-this.scaleLines, i+this.borderWidth);
 		}
