@@ -9,7 +9,7 @@
   
   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
     <file>log/${timestamp}.log</file>
-    <append>true</append>
+    <append>false</append>
     <encoder>
       <pattern>%date [%thread] %level %logger{0} - %msg%n</pattern>
     </encoder>

@@ -52,6 +52,7 @@ public class MainClass
 		jc.setContext(context);
 		context.reset();
 		context.putProperty("timestamp", timestamp);
+		
 		try
 		{
 			jc.doConfigure("src/logback.xml");
