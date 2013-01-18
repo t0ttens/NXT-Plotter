@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
 import nxt.lejos.imagetool.view.TableContainer;
+import nxt.lejos.plotterinterface.MotorController;
 
 public class TestAction extends AbstractAction
 {
@@ -25,6 +26,7 @@ public class TestAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
-		TableContainer.getInstance().generateRandomPoints();
+//		TableContainer.getInstance().generateRandomPoints();
+		MotorController.getInstance().moveToStartPosition();
 	}
 }

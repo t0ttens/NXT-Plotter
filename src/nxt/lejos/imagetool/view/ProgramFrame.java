@@ -85,9 +85,6 @@ public class ProgramFrame extends JFrame
 		this.initMenuBar();
 		this.initContent();
 		
-		//TEST
-		TableContainer.getInstance().generateSinus();
-		
 		this.pack();
 		this.setVisible(true);
 	}
