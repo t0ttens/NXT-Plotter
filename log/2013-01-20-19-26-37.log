@@ -1,0 +1,10 @@
+2013-01-20 19:26:37,106 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-20 19:26:37,679 [main] DEBUG ProgramFrame - instanziiert
+2013-01-20 19:26:37,701 [main] DEBUG TableContainer - instanziiert
+2013-01-20 19:26:37,714 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-20 19:26:39,568 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-20 19:26:42,694 [AWT-EventQueue-0] DEBUG ProcessListAction - aufgerufen
+2013-01-20 19:26:42,696 [AWT-EventQueue-0] DEBUG Functions - Berechne Koordinaten und Geschwindigkeiten aus der Tabelle
+2013-01-20 19:26:42,697 [AWT-EventQueue-0] DEBUG MotorController - instanziiert
+2013-01-20 19:26:42,698 [AWT-EventQueue-0] INFO MotorController - Dummy-Modus
+2013-01-20 19:26:42,698 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an

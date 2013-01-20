@@ -1,0 +1,35 @@
+2013-01-20 19:27:00,547 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-20 19:27:01,146 [main] DEBUG ProgramFrame - instanziiert
+2013-01-20 19:27:01,167 [main] DEBUG TableContainer - instanziiert
+2013-01-20 19:27:01,180 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-20 19:27:03,086 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-20 19:27:09,760 [AWT-EventQueue-0] DEBUG ProcessListAction - aufgerufen
+2013-01-20 19:27:09,761 [AWT-EventQueue-0] DEBUG Functions - Berechne Koordinaten und Geschwindigkeiten aus der Tabelle
+2013-01-20 19:27:09,763 [AWT-EventQueue-0] DEBUG MotorController - instanziiert
+2013-01-20 19:27:09,763 [AWT-EventQueue-0] INFO MotorController - Dummy-Modus
+2013-01-20 19:27:09,763 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an
+2013-01-20 19:27:26,294 [AWT-EventQueue-0] INFO MotorController - Schlitten in Ausgangsposition: 0/0
+2013-01-20 19:27:26,295 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-20 19:27:26,299 [AWT-EventQueue-0] INFO MotorController - 4452/2822 wird angefahren, Geschwindigkeit: 360/228
+2013-01-20 19:27:26,313 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,313 [AWT-EventQueue-0] INFO MotorController - 13726/57 wird angefahren, Geschwindigkeit: 360/107
+2013-01-20 19:27:26,322 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,322 [AWT-EventQueue-0] INFO MotorController - 10162/1097 wird angefahren, Geschwindigkeit: 360/105
+2013-01-20 19:27:26,332 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,332 [AWT-EventQueue-0] INFO MotorController - 9096/4269 wird angefahren, Geschwindigkeit: 121/360
+2013-01-20 19:27:26,342 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,342 [AWT-EventQueue-0] INFO MotorController - 10547/12840 wird angefahren, Geschwindigkeit: 61/360
+2013-01-20 19:27:26,351 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,352 [AWT-EventQueue-0] INFO MotorController - 3159/2384 wird angefahren, Geschwindigkeit: 254/360
+2013-01-20 19:27:26,363 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,363 [AWT-EventQueue-0] INFO MotorController - 6788/12360 wird angefahren, Geschwindigkeit: 131/360
+2013-01-20 19:27:26,372 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,372 [AWT-EventQueue-0] INFO MotorController - 9584/2111 wird angefahren, Geschwindigkeit: 98/360
+2013-01-20 19:27:26,382 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,382 [AWT-EventQueue-0] INFO MotorController - 13228/1251 wird angefahren, Geschwindigkeit: 360/85
+2013-01-20 19:27:26,393 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,393 [AWT-EventQueue-0] INFO MotorController - 4771/6882 wird angefahren, Geschwindigkeit: 360/240
+2013-01-20 19:27:26,403 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 0/0
+2013-01-20 19:27:26,403 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-20 19:27:26,408 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an
+2013-01-20 19:27:26,540 [AWT-EventQueue-0] INFO MotorController - Schlitten in Ausgangsposition: 0/0

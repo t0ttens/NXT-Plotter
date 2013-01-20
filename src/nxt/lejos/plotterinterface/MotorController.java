@@ -1,7 +1,6 @@
 package nxt.lejos.plotterinterface;
 
 import lejos.nxt.Motor;
-
 import nxt.lejos.data.Constants;
 import nxt.lejos.data.Constants.MotorDirections;
 
@@ -75,26 +74,6 @@ public class MotorController
 		return this.isDrawing;
 	}
 	
-	private void observeLimitSensors()
-	{
-		while (this.xMotorRuns || this.yMotorRuns)
-		{	
-			if (LimitSensors.getInstance().limitXreached() && this.xMotorRuns)
-			{
-				Motor.A.stop();
-				Motor.A.resetTachoCount();
-				this.xMotorRuns = false;
-			}
-			
-			if (LimitSensors.getInstance().limitYreached() && this.yMotorRuns)
-			{
-				Motor.B.stop();
-				Motor.B.resetTachoCount();
-				this.yMotorRuns = false;
-			}
-		}
-	}
-	
 	public void moveToStartPosition()
 	{
 		logger.info("Zeichenvorrichtung faehrt Startposition an");
@@ -130,7 +109,22 @@ public class MotorController
 			this.yMotorRuns = true;
 		}
 		
-		this.observeLimitSensors();
+		while (this.xMotorRuns || this.yMotorRuns)
+		{	
+			if (LimitSensors.getInstance().limitXreached() && this.xMotorRuns)
+			{
+				Motor.A.stop();
+				Motor.A.resetTachoCount();
+				this.xMotorRuns = false;
+			}
+			
+			if (LimitSensors.getInstance().limitYreached() && this.yMotorRuns)
+			{
+				Motor.B.stop();
+				Motor.B.resetTachoCount();
+				this.yMotorRuns = false;
+			}
+		}
 		
 		logger.info("Schlitten in Ausgangsposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
 	}
@@ -154,7 +148,13 @@ public class MotorController
 		this.xMotorRuns = true;
 		this.yMotorRuns = true;
 		
-		this.observeLimitSensors();
+		while (Motor.A.isMoving() || Motor.B.isMoving())
+		{
+			
+		}
+		
+		this.xMotorRuns = false;
+		this.yMotorRuns = false;
 		
 		logger.info("Schlittenposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
 	}
@@ -172,7 +172,7 @@ public class MotorController
 				logger.info("Zeichenvorrichtung wird abgesenkt");
 				
 				Motor.C.setSpeed(50);
-				Motor.C.rotateTo(-50, true);
+				Motor.C.rotateTo(-50);
 				
 				isDrawing = true;
 			}
@@ -184,7 +184,7 @@ public class MotorController
 				logger.info("Zeichenvorrichtung wird hochgefahren");
 				
 				Motor.C.setSpeed(50);
-				Motor.C.rotateTo(0, true);
+				Motor.C.rotateTo(0);
 				
 				isDrawing = false;
 			}

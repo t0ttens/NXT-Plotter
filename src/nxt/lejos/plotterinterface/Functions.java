@@ -58,7 +58,6 @@ public class Functions
 		int diffY;
 		int speedX;
 		int speedY;
-//		int draw;
 		
 		for (int vector=0; vector<pathPoints.size(); vector++)
 		{
@@ -76,8 +75,6 @@ public class Functions
 			
 			currX = pathPoints.get(vector).get(0);
 			currY = pathPoints.get(vector).get(1);
-			
-//			draw = pathPoints.get(vector).get(2);
 			
 			diffX = Math.abs(currX - prevX);
 			diffY = Math.abs(currY - prevY);
@@ -130,18 +127,20 @@ public class Functions
 		int speedX;
 		int speedY;
 		
-		MotorController.getInstance().draw(true);
-		
 		for (int vector=0; vector<pathData.size(); vector++)
 		{
-			logger.debug("Punkt");
-			
 			x = pathData.get(vector).get(0);
 			y = pathData.get(vector).get(1);
 			speedX = pathData.get(vector).get(2);
 			speedY = pathData.get(vector).get(3);
 			
 			MotorController.getInstance().moveToPoint(x, y, speedX, speedY);
+			
+			if (vector == 0)
+			{
+				//Schlitten wird erst nach Erreichen des Startpunktes abgesenkt
+				MotorController.getInstance().draw(true);
+			}
 		}
 		
 		MotorController.getInstance().draw(false);
