@@ -3,6 +3,7 @@ package nxt.lejos.plotterinterface;
 import lejos.nxt.Motor;
 
 import nxt.lejos.data.Constants;
+import nxt.lejos.data.Constants.MotorDirections;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -101,7 +102,6 @@ public class MotorController
 			if (LimitSensors.getInstance().limitXreached() && xMotorRuns)
 			{
 				Motor.A.stop();
-				System.out.println("x: " + this.getXPos());
 				Motor.A.resetTachoCount();
 				xMotorRuns = false;
 			}
@@ -109,17 +109,17 @@ public class MotorController
 			if (LimitSensors.getInstance().limitYreached() && yMotorRuns)
 			{
 				Motor.B.stop();
-				System.out.println("y: " + this.getYPos());
 				Motor.B.resetTachoCount();
 				yMotorRuns = false;
 			}
 		}
-		logger.info("Schlitten in Ausgangsposition:\nx: " + Motor.A.getTachoCount() + "\ny: " + Motor.B.getTachoCount());
+		logger.info("Schlitten in Ausgangsposition: " + this.getXPos() + "/" + this.getYPos());
 	}
 	
 	public void moveToPoint(int x, int y, int speedX, int speedY)
 	{
 		logger.info(x + "/" + y + " wird angefahren, Geschwindigkeit: " + speedX + "/" + speedY);
+		logger.info("Schlittenposition: " + this.getXPos() + "/" + this.getYPos());
 	}
 	
 	public void draw(boolean b)
@@ -150,43 +150,57 @@ public class MotorController
 		}
 	}
 	
-	public void moveLeftUp(boolean b)
+	public void move(MotorDirections direction)
 	{
-		logger.info("Motor faehrt nach links oben");
+		logger.info("Schlitten faehrt nach " + direction);
+		
+		switch (direction)
+		{
+			case LEFT_UP:
+				Motor.A.backward();
+				Motor.B.forward();
+				break;
+			case UP:
+				Motor.A.backward();
+				break;
+			case RIGHT_UP:
+				Motor.A.backward();
+				Motor.B.backward();
+				break;
+			case LEFT:
+				Motor.B.forward();
+				break;
+			case RIGHT:
+				Motor.B.backward();
+				break;
+			case LEFT_DOWN:
+				Motor.A.forward();
+				Motor.B.forward();
+				break;
+			case DOWN:
+				Motor.A.forward();
+				break;
+			case RIGHT_DOWN:
+				Motor.A.forward();
+				Motor.B.backward();
+				break;
+			default:
+				logger.error("Invalide Richtungsangabe, sollte niemals auftreten");
+				break;
+		}
+		
+		logger.debug("Motor(en) in Bewegung");
 	}
 	
-	public void moveUp(boolean b)
+	public void stop()
 	{
-		logger.info("Motor faehrt nach oben");
-	}
-	
-	public void moveRightUp(boolean b)
-	{
-		logger.info("Motor faehrt nach rechts oben");
-	}
-	
-	public void moveLeft(boolean b)
-	{
-		logger.info("Motor faehrt nach links");
-	}
-	
-	public void moveRight(boolean b)
-	{
-		logger.info("Motor faehrt nach rechts");
-	}
-	
-	public void moveLeftDown(boolean b)
-	{
-		logger.info("Motor faehrt nach links unten");
-	}
-	
-	public void moveDown(boolean b)
-	{
-		logger.info("Motor faehrt nach unten");
-	}
-	
-	public void moveRightDown(boolean b)
-	{
-		logger.info("Motor faehrt nach rechts unten");
+		logger.info("Motor(en) stoppen");
+		
+		Motor.A.stop();
+		Motor.B.stop();
+		
+		logger.debug("Motor(en) gestoppt");
+		
+		logger.info("Schlittenposition: " + this.getXPos() + "/" + this.getYPos());
 	}
 }

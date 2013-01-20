@@ -1,9 +1,9 @@
 package nxt.lejos.imagetool.view.components;
 
 import java.awt.Font;
-import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-import javax.swing.AbstractAction;
 import javax.swing.JButton;
 
 import nxt.lejos.data.Constants;
@@ -31,7 +31,8 @@ public class DirectionButton extends JButton
 		this.fontSize = Constants.ARROW_FONT_SIZE;
 		this.setFontSize();
 		this.setArrowIcon();
-		this.initAction();
+//		this.initAction();
+		this.initMouseListener();
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -75,111 +76,36 @@ public class DirectionButton extends JButton
 		}
 	}
 	
-	private void initAction()
+	private void initMouseListener()
 	{
-		switch (this.direction)
+		this.addMouseListener(new MouseListener()
 		{
-		case LEFT_UP:
-			this.addActionListener(new AbstractAction()
+			@Override
+			public void mouseReleased(MouseEvent arg0)
 			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveLeftUp(true);
-				}
-			});
-			break;
-		case UP:
-			this.addActionListener(new AbstractAction()
+				MotorController.getInstance().stop();
+			}
+			
+			@Override
+			public void mousePressed(MouseEvent arg0)
 			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveUp(true);
-				}
-			});
-			break;
-		case RIGHT_UP:
-			this.addActionListener(new AbstractAction()
+				MotorController.getInstance().move(direction);
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent arg0)
 			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveRightUp(true);
-				}
-			});
-			break;
-		case LEFT:
-			this.addActionListener(new AbstractAction()
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent arg0)
 			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveLeft(true);
-				}
-			});
-			break;
-		case RIGHT:
-			this.addActionListener(new AbstractAction()
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent arg0)
 			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveRight(true);
-				}
-			});
-			break;
-		case LEFT_DOWN:
-			this.addActionListener(new AbstractAction()
-			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveLeftDown(true);
-				}
-			});
-			break;
-		case DOWN:
-			this.addActionListener(new AbstractAction()
-			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveDown(true);
-				}
-			});
-			break;
-		case RIGHT_DOWN:
-			this.addActionListener(new AbstractAction()
-			{
-				private static final long serialVersionUID = 1L;
-
-				@Override
-				public void actionPerformed(ActionEvent arg0)
-				{
-					MotorController.getInstance().moveRightDown(true);
-				}
-			});
-			break;
-		}
+			}
+		});
 	}
-	
-//	public MotorDirections getDirection()
-//	{
-//		return this.direction;
-//	}
 }

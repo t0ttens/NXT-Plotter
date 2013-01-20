@@ -107,6 +107,16 @@ public class ManualControlFrame extends JDialog
 		this.controlPanel.setLayout(new FlowLayout());
 		
 		this.controlPanel.add(this.startPosButton);
+		this.startPosButton.addActionListener(new AbstractAction()
+		{
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			public void actionPerformed(ActionEvent arg0)
+			{
+				MotorController.getInstance().moveToStartPosition();
+			}
+		});
 		
 		//DrawCheckBox-Actionlistener
 		this.controlPanel.add(this.drawCheckBox);

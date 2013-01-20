@@ -16,8 +16,8 @@ public class LimitSensors
 
 	private static LimitSensors instance = null;
 	
-	TouchSensor limitX = null;
-	TouchSensor limitY = null;
+	private TouchSensor limitSensorX = null;
+	private TouchSensor limitSensorY = null;
 	
 	//-----------------------------------------------------------------------------
 	//------------------------Constructor(s)---------------------------------------
@@ -25,8 +25,8 @@ public class LimitSensors
 
 	private LimitSensors()
 	{
-		limitX = new TouchSensor(SensorPort.S1);
-		limitY = new TouchSensor(SensorPort.S2);
+		limitSensorX = new TouchSensor(SensorPort.S1);
+		limitSensorY = new TouchSensor(SensorPort.S2);
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -44,11 +44,11 @@ public class LimitSensors
 	
 	public boolean limitXreached()
 	{
-		return limitX.isPressed();
+		return limitSensorX.isPressed();
 	}
 	
 	public boolean limitYreached()
 	{
-		return limitY.isPressed();
+		return limitSensorY.isPressed();
 	}
 }
