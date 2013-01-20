@@ -43,6 +43,10 @@ public class MotorController
 		{
 			logger.info("Dummy-Modus");
 		}
+		else
+		{
+			this.initMotorZ();
+		}
 	}
 	
 	//-----------------------------------------------------------------------------
@@ -56,6 +60,11 @@ public class MotorController
 			instance = new MotorController();
 		}
 		return instance;
+	}
+	
+	private void initMotorZ()
+	{
+		Motor.C.resetTachoCount();
 	}
 	
 	private int getXPos()
@@ -133,6 +142,10 @@ public class MotorController
 			else
 			{
 				logger.info("Zeichenvorrichtung wird abgesenkt");
+				
+				Motor.C.setSpeed(50);
+				Motor.C.rotateTo(-50, true);
+				
 				isDrawing = true;
 			}
 		}
@@ -141,6 +154,11 @@ public class MotorController
 			if (isDrawing)
 			{
 				logger.info("Zeichenvorrichtung wird hochgefahren");
+				
+				Motor.C.setSpeed(50);
+				Motor.C.rotateTo(0, true);
+				Motor.C.resetTachoCount();
+				
 				isDrawing = false;
 			}
 			else
