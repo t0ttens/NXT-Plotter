@@ -1,0 +1,28 @@
+2013-01-20 12:52:59,162 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-20 12:53:00,422 [main] DEBUG ProgramFrame - instanziiert
+2013-01-20 12:53:00,441 [main] DEBUG TableContainer - instanziiert
+2013-01-20 12:53:00,452 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-20 12:53:02,600 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-20 12:53:02,602 [AWT-EventQueue-0] DEBUG MotorController - instanziiert
+2013-01-20 12:53:02,603 [AWT-EventQueue-0] INFO MotorController - Dummy-Modus
+2013-01-20 12:53:03,781 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach UP
+2013-01-20 12:53:03,870 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) in Bewegung
+2013-01-20 12:53:12,191 [AWT-EventQueue-0] INFO MotorController - Motor(en) stoppen
+2013-01-20 12:53:12,192 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) gestoppt
+2013-01-20 12:53:12,208 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: -5953/0
+2013-01-20 12:53:12,823 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach LEFT
+2013-01-20 12:53:12,824 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) in Bewegung
+2013-01-20 12:53:20,618 [AWT-EventQueue-0] INFO MotorController - Motor(en) stoppen
+2013-01-20 12:53:20,618 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) gestoppt
+2013-01-20 12:53:20,634 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: -5987/5581
+2013-01-20 12:53:24,469 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-20 12:53:25,303 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach RIGHT_DOWN
+2013-01-20 12:53:25,304 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) in Bewegung
+2013-01-20 12:53:25,664 [AWT-EventQueue-0] INFO MotorController - Motor(en) stoppen
+2013-01-20 12:53:25,665 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) gestoppt
+2013-01-20 12:53:25,680 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: -5811/5436
+2013-01-20 12:53:26,529 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach LEFT_UP
+2013-01-20 12:53:26,530 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) in Bewegung
+2013-01-20 12:53:28,907 [AWT-EventQueue-0] INFO MotorController - Motor(en) stoppen
+2013-01-20 12:53:28,907 [AWT-EventQueue-0] DEBUG MotorController - Motor(en) gestoppt
+2013-01-20 12:53:28,923 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: -7333/6979

@@ -1,0 +1,7 @@
+2013-01-20 12:27:21,860 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-20 12:27:22,417 [main] DEBUG ProgramFrame - instanziiert
+2013-01-20 12:27:22,435 [main] DEBUG TableContainer - instanziiert
+2013-01-20 12:27:22,446 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-20 12:27:24,754 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-20 12:27:24,756 [AWT-EventQueue-0] DEBUG MotorController - instanziiert
+2013-01-20 12:27:24,756 [AWT-EventQueue-0] INFO MotorController - Dummy-Modus

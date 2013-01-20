@@ -1,0 +1,19 @@
+2013-01-19 22:49:22,774 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-19 22:49:23,230 [main] DEBUG ProgramFrame - instanziiert
+2013-01-19 22:49:23,247 [main] DEBUG TableContainer - instanziiert
+2013-01-19 22:49:23,258 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-19 22:49:27,539 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:29,163 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:30,649 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:31,837 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:32,476 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:33,258 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:35,345 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:37,470 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:38,815 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:39,885 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:40,723 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:42,513 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:45,798 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:51,745 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-19 22:49:52,695 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
