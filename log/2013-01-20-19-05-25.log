@@ -1,0 +1,14 @@
+2013-01-20 19:05:25,060 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-20 19:05:25,528 [main] DEBUG ProgramFrame - instanziiert
+2013-01-20 19:05:25,545 [main] DEBUG TableContainer - instanziiert
+2013-01-20 19:05:25,556 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-20 19:05:29,142 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-20 19:05:29,145 [AWT-EventQueue-0] DEBUG MotorController - instanziiert
+2013-01-20 19:05:29,145 [AWT-EventQueue-0] INFO MotorController - Dummy-Modus
+2013-01-20 19:05:33,121 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-20 19:05:34,696 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-20 19:05:35,704 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-20 19:05:36,776 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-20 19:05:37,744 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-20 19:05:38,976 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-20 19:05:39,527 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt

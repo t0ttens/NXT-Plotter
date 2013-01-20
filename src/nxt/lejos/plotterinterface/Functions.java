@@ -134,6 +134,8 @@ public class Functions
 		
 		for (int vector=0; vector<pathData.size(); vector++)
 		{
+			logger.debug("Punkt");
+			
 			x = pathData.get(vector).get(0);
 			y = pathData.get(vector).get(1);
 			speedX = pathData.get(vector).get(2);

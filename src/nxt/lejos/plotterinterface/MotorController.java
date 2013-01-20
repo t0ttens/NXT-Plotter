@@ -27,8 +27,11 @@ public class MotorController
 	private boolean dummyMode = false;
 	private boolean isDrawing = false;
 	
-	private int xPos = 0;
-	private int yPos = 0;
+	private boolean xInverted = true;
+	private boolean yInverted = false;
+	
+	private boolean xMotorRuns = false;
+	private boolean yMotorRuns = false;
 	
 	//-----------------------------------------------------------------------------
 	//------------------------Constructor(s)---------------------------------------
@@ -67,68 +70,93 @@ public class MotorController
 		Motor.C.resetTachoCount();
 	}
 	
-	private int getXPos()
-	{
-		this.xPos = Motor.A.getTachoCount();
-		return this.xPos;
-	}
-	
-	private int getYPos()
-	{
-		this.yPos = Motor.B.getTachoCount();
-		return this.yPos;
-	}
-	
 	public boolean isDrawing()
 	{
 		return this.isDrawing;
+	}
+	
+	private void observeLimitSensors()
+	{
+		while (this.xMotorRuns || this.yMotorRuns)
+		{	
+			if (LimitSensors.getInstance().limitXreached() && this.xMotorRuns)
+			{
+				Motor.A.stop();
+				Motor.A.resetTachoCount();
+				this.xMotorRuns = false;
+			}
+			
+			if (LimitSensors.getInstance().limitYreached() && this.yMotorRuns)
+			{
+				Motor.B.stop();
+				Motor.B.resetTachoCount();
+				this.yMotorRuns = false;
+			}
+		}
 	}
 	
 	public void moveToStartPosition()
 	{
 		logger.info("Zeichenvorrichtung faehrt Startposition an");
 
-		boolean xMotorRuns = false;
-		boolean yMotorRuns = false;
+		
 		
 		Motor.A.setSpeed(360);
 		Motor.B.setSpeed(360);
 		
 		if (!LimitSensors.getInstance().limitXreached())
 		{
-			Motor.A.forward();
-			xMotorRuns = true;
+			if (!xInverted)
+			{
+				Motor.A.backward();
+			}
+			else
+			{
+				Motor.A.forward();
+			}
+			this.xMotorRuns = true;
 		}
 		
 		if (!LimitSensors.getInstance().limitYreached())
 		{
-			Motor.B.backward();
-			yMotorRuns = true;
+			if (!yInverted)
+			{
+				Motor.B.backward();
+			}
+			else
+			{
+				Motor.B.forward();
+			}
+			this.yMotorRuns = true;
 		}
 		
-		while (xMotorRuns || yMotorRuns)
-		{	
-			if (LimitSensors.getInstance().limitXreached() && xMotorRuns)
-			{
-				Motor.A.stop();
-				Motor.A.resetTachoCount();
-				xMotorRuns = false;
-			}
-			
-			if (LimitSensors.getInstance().limitYreached() && yMotorRuns)
-			{
-				Motor.B.stop();
-				Motor.B.resetTachoCount();
-				yMotorRuns = false;
-			}
-		}
-		logger.info("Schlitten in Ausgangsposition: " + this.getXPos() + "/" + this.getYPos());
+		this.observeLimitSensors();
+		
+		logger.info("Schlitten in Ausgangsposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
 	}
 	
 	public void moveToPoint(int x, int y, int speedX, int speedY)
 	{
 		logger.info(x + "/" + y + " wird angefahren, Geschwindigkeit: " + speedX + "/" + speedY);
-		logger.info("Schlittenposition: " + this.getXPos() + "/" + this.getYPos());
+		
+		if (this.xInverted)
+		{
+			x = -x;
+		}
+		
+		if (this.yInverted)
+		{
+			y = -y;
+		}
+
+		Motor.A.rotateTo(x, true);
+		Motor.B.rotateTo(y, true);
+		this.xMotorRuns = true;
+		this.yMotorRuns = true;
+		
+		this.observeLimitSensors();
+		
+		logger.info("Schlittenposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
 	}
 	
 	public void draw(boolean b)
@@ -157,7 +185,6 @@ public class MotorController
 				
 				Motor.C.setSpeed(50);
 				Motor.C.rotateTo(0, true);
-				Motor.C.resetTachoCount();
 				
 				isDrawing = false;
 			}
@@ -219,6 +246,6 @@ public class MotorController
 		
 		logger.debug("Motor(en) gestoppt");
 		
-		logger.info("Schlittenposition: " + this.getXPos() + "/" + this.getYPos());
+		logger.info("Schlittenposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
 	}
 }
