@@ -1,0 +1,17 @@
+2013-01-21 10:34:49,304 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-21 10:34:49,354 [main] DEBUG ProgramFrame - instanziiert
+2013-01-21 10:34:49,374 [main] DEBUG TableContainer - instanziiert
+2013-01-21 10:34:49,384 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-21 10:34:51,104 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-21 10:34:51,114 [AWT-EventQueue-0] DEBUG MotorController - instanziiert, Dummy Modus: true
+2013-01-21 10:34:51,114 [AWT-EventQueue-0] DEBUG MotorController - Motor Z wird genullt
+2013-01-21 10:34:53,815 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach RIGHT_DOWN
+2013-01-21 10:34:53,886 [AWT-EventQueue-0] INFO MotorController - Motoren stoppen
+2013-01-21 10:34:54,276 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach RIGHT
+2013-01-21 10:34:54,366 [AWT-EventQueue-0] INFO MotorController - Motoren stoppen
+2013-01-21 10:34:54,626 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach RIGHT_UP
+2013-01-21 10:34:54,726 [AWT-EventQueue-0] INFO MotorController - Motoren stoppen
+2013-01-21 10:34:54,926 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach UP
+2013-01-21 10:34:55,007 [AWT-EventQueue-0] INFO MotorController - Motoren stoppen
+2013-01-21 10:34:55,247 [AWT-EventQueue-0] INFO MotorController - Schlitten faehrt nach LEFT_UP
+2013-01-21 10:34:55,327 [AWT-EventQueue-0] INFO MotorController - Motoren stoppen

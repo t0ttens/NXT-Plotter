@@ -125,8 +125,12 @@ public class MotorController
 			y = -y;
 		}
 
+		Motor.A.setSpeed(speedX);
+		Motor.B.setSpeed(speedY);
+		
 		Motor.A.rotateTo(x, true);
 		Motor.B.rotateTo(y, true);
+		
 		this.xMotorRuns = true;
 		this.yMotorRuns = true;
 		

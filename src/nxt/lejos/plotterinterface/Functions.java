@@ -35,7 +35,7 @@ public class Functions
 		
 		if (quotDistance != quotSpeed)
 		{
-			System.out.println("qD="+quotDistance+"\tqS="+quotSpeed);
+			logger.warn("Geschwindigkeitsquotient abweichend (qD/qS): " + (quotDistance/quotSpeed));
 		}
 		
 		speeds[0] = greaterSpeed;
@@ -108,7 +108,6 @@ public class Functions
 			temp.add(currY);
 			temp.add(speedX);
 			temp.add(speedY);
-//			temp.add(draw);
 			
 			//temp-Vektor in Pfaddaten-Vektor schreiben
 			pathData.add(temp);
