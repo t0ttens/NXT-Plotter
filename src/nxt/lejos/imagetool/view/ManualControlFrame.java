@@ -60,6 +60,7 @@ public class ManualControlFrame extends JDialog
 		this.initBehaviour();
 		this.initAppearance();
 		this.initContent();
+		this.initKeyListener();
 		
 		this.pack();
 		this.setLocationRelativeTo(ProgramFrame.getInstance());
@@ -139,5 +140,11 @@ public class ManualControlFrame extends JDialog
 		//Border
 		this.buttonPanel.setBorder(Constants.PREFERED_BORDER_TYPE);
 		this.controlPanel.setBorder(Constants.PREFERED_BORDER_TYPE);
+	}
+	
+	private void initKeyListener()
+	{
+		this.setFocusable(true);
+		this.addKeyListener(new MoveKeyListener());
 	}
 }

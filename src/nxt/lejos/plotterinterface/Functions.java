@@ -35,7 +35,7 @@ public class Functions
 		
 		if (quotDistance != quotSpeed)
 		{
-			logger.warn("Geschwindigkeitsquotient abweichend (qD/qS): " + (quotDistance/quotSpeed));
+			logger.warn("Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): " + (quotDistance/quotSpeed));
 		}
 		
 		speeds[0] = greaterSpeed;
