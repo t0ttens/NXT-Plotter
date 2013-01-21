@@ -125,6 +125,7 @@ public class TableContainer extends JScrollPane
 			
 			for (int j=0; j<rawList.get(i).size(); j++)
 			{
+				//Alle Werte werden definitiv nochmal als Integer gecastet, hat zu Fehlern gefuert
 				int value = Integer.parseInt("" + rawList.get(i).get(j));
 				temp.add(value);
 			}
@@ -139,7 +140,7 @@ public class TableContainer extends JScrollPane
 	{	
 		Vector<Vector<Integer>> importData = new Vector<Vector<Integer>>();
 		
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser("./csv/");
 //		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
 		int returnVal = chooser.showOpenDialog(this);
 		
@@ -194,7 +195,7 @@ public class TableContainer extends JScrollPane
 		@SuppressWarnings("unchecked")
 		Vector<Vector<Integer>> data = this.tableModel.getDataVector();
 		
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser("./csv/");
 //		chooser.setFileFilter(new FileNameExtensionFilter("CSV-Datei", ".csv"));
 		int returnVal = chooser.showSaveDialog(this);
 		

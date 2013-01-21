@@ -41,8 +41,8 @@ public class DirectionButton extends JButton
 	
 	private void setFontSize()
 	{
+		//SansSerif hat Unicode-Pfeile fuer alle OS
 		Font buttonFont = new Font("SansSerif", this.getFont().getStyle(), this.fontSize);
-		System.out.println(buttonFont.getFontName());
 		this.setFont(buttonFont);
 	}
 	
