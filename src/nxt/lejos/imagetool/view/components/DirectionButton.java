@@ -41,7 +41,8 @@ public class DirectionButton extends JButton
 	
 	private void setFontSize()
 	{
-		Font buttonFont = new Font(this.getFont().getName(), this.getFont().getStyle(), this.fontSize);
+		Font buttonFont = new Font("SansSerif", this.getFont().getStyle(), this.fontSize);
+		System.out.println(buttonFont.getFontName());
 		this.setFont(buttonFont);
 	}
 	
