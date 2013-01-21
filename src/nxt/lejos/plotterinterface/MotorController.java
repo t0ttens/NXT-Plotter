@@ -21,13 +21,12 @@ public class MotorController
 	private static MotorController instance = null;
 	
 	//Logger
-	private static final Logger logger = LoggerFactory.getLogger(MotorController.class.getName());
+	protected final Logger logger = LoggerFactory.getLogger(MotorController.class.getName());
 	
-	private boolean dummyMode = false;
-	private boolean isDrawing = false;
+	protected boolean isDrawing = false;
 	
-	private boolean xInverted = true;
-	private boolean yInverted = false;
+	protected boolean xInverted = true;
+	protected boolean yInverted = false;
 	
 	private boolean xMotorRuns = false;
 	private boolean yMotorRuns = false;
@@ -36,35 +35,18 @@ public class MotorController
 	//------------------------Constructor(s)---------------------------------------
 	//-----------------------------------------------------------------------------
 
-	private MotorController()
+	protected MotorController()
 	{		
-		logger.debug("instanziiert");
-		
-		this.dummyMode = Constants.DUMMY_MODE;
-		if (this.dummyMode)
-		{
-			logger.info("Dummy-Modus");
-		}
-		else
-		{
-			this.initMotorZ();
-		}
+		logger.debug("instanziiert, Dummy Modus: " + Constants.DUMMY_MODE);
+
+		this.initMotorZ();
 	}
 	
 	//-----------------------------------------------------------------------------
 	//------------------------Methods/Functions------------------------------------
 	//-----------------------------------------------------------------------------
 	
-	public static MotorController getInstance()
-	{
-		if (instance == null)
-		{
-			instance = new MotorController();
-		}
-		return instance;
-	}
-	
-	private void initMotorZ()
+	protected void initMotorZ()
 	{
 		Motor.C.resetTachoCount();
 	}
@@ -163,7 +145,7 @@ public class MotorController
 	{
 		if (b)
 		{
-			if (isDrawing)
+			if (this.isDrawing)
 			{
 				logger.error("Zeichenvorrichtung ist bereits unten!");
 			}
@@ -174,7 +156,7 @@ public class MotorController
 				Motor.C.setSpeed(50);
 				Motor.C.rotateTo(-50);
 				
-				isDrawing = true;
+				this.isDrawing = true;
 			}
 		}
 		else
@@ -186,7 +168,7 @@ public class MotorController
 				Motor.C.setSpeed(50);
 				Motor.C.rotateTo(0);
 				
-				isDrawing = false;
+				this.isDrawing = false;
 			}
 			else
 			{
@@ -247,5 +229,21 @@ public class MotorController
 		logger.debug("Motor(en) gestoppt");
 		
 		logger.info("Schlittenposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
+	}
+	
+	public static MotorController getInstance()
+	{
+		if (instance == null)
+		{
+			if (Constants.DUMMY_MODE)
+			{
+				instance = new MotorControllerDummy();
+			}
+			else
+			{
+				instance = new MotorController();
+			}
+		}
+		return instance;
 	}
 }
