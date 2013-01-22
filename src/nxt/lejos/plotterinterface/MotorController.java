@@ -58,13 +58,25 @@ public class MotorController
 
 	public void draw(boolean b)
 	{
-		if (b)
+		if (this.isDrawing)
 		{
-			if (this.isDrawing)
+			if (!b)
 			{
-				logger.error("Zeichenvorrichtung ist bereits unten!");
+				logger.info("Zeichenvorrichtung wird hochgefahren");
+				
+				Motor.C.setSpeed(50);
+				Motor.C.rotateTo(0);
+				
+				this.isDrawing = false;
 			}
 			else
+			{
+				logger.error("Zeichenvorrichtung ist bereits oben");
+			}
+		}
+		else
+		{
+			if (b)
 			{
 				logger.info("Zeichenvorrichtung wird abgesenkt");
 				
@@ -73,21 +85,9 @@ public class MotorController
 				
 				this.isDrawing = true;
 			}
-		}
-		else
-		{
-			if (isDrawing)
-			{
-				logger.info("Zeichenvorrichtung wird hochgefahren");
-				
-				Motor.C.setSpeed(50);
-				Motor.C.rotateTo(0);
-				
-				this.isDrawing = true;
-			}
 			else
 			{
-				logger.error("Zeichenvorrichtung ist bereits oben!");
+				logger.error("Zeichenvorrichtung ist bereits unten");
 			}
 		}
 	}

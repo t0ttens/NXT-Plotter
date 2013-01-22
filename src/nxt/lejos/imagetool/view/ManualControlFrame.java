@@ -30,6 +30,10 @@ public class ManualControlFrame extends JDialog
 
 	private static final long serialVersionUID = 1L;
 	
+	//kein singleton, dient zum externen Zugriff auf die Checkbox wenn malen per Tastendruck gestartet wird
+	//ausserst unelegant, mir fiel grad nichts besseres ein
+	private static ManualControlFrame instance = null;
+	
 	//Logger
 	private static final Logger logger = LoggerFactory.getLogger(ManualControlFrame.class.getName());
 	
@@ -58,6 +62,8 @@ public class ManualControlFrame extends JDialog
 	public ManualControlFrame()
 	{
 		logger.debug("instanziiert");
+		
+		instance = this;
 		
 		this.initBehaviour();
 		this.initAppearance();
@@ -123,6 +129,8 @@ public class ManualControlFrame extends JDialog
 		
 		//DrawCheckBox-Actionlistener
 		this.controlPanel.add(this.drawCheckBox);
+		//Ueberpfuefe Position der Malvorrichtung und setze CheckBox entsprechend
+		this.drawCheckBox.setSelected(MotorController.getInstance().isDrawing());
 		this.drawCheckBox.addActionListener(new AbstractAction()
 		{
 			private static final long serialVersionUID = 1L;
@@ -130,12 +138,9 @@ public class ManualControlFrame extends JDialog
 			@Override
 			public void actionPerformed(ActionEvent arg0)
 			{
-				//draw() erhaelt direkt den isSelected-boolan der CheckBox, sodass der Stift hoch- oder heruntergefahren wird
 				MotorController.getInstance().draw(drawCheckBox.isSelected());
 			}
 		});
-		//Ueberpfuefe Position der Malvorrichtung und setze CheckBox entsprechend
-		this.drawCheckBox.setSelected(MotorController.getInstance().isDrawing());
 		
 		this.add(this.controlPanel, BorderLayout.SOUTH);
 		
@@ -157,5 +162,15 @@ public class ManualControlFrame extends JDialog
 		{
 			component.addKeyListener(keyListener);
 		}
+	}
+	
+	public void setCheckBox(boolean b)
+	{
+		this.drawCheckBox.setSelected(b);
+	}
+	
+	public static ManualControlFrame getInstance()
+	{
+		return instance;
 	}
 }

@@ -30,32 +30,28 @@ public class MotorControllerDummy extends MotorController
 	@Override
 	public void draw(boolean b)
 	{
-		logger.debug("draw() wird aufgerufen mit Parameter " + b);
-		
-		if (b)
+		if (this.isDrawing)
 		{
-			if (this.isDrawing)
-			{
-				logger.error("Zeichenvorrichtung ist bereits unten!");
-			}
-			else
-			{
-				logger.info("Zeichenvorrichtung wird abgesenkt");
-				
-				this.isDrawing = true;
-			}
-		}
-		else
-		{
-			if (isDrawing)
+			if (!b)
 			{
 				logger.info("Zeichenvorrichtung wird hochgefahren");
-				
 				this.isDrawing = false;
 			}
 			else
 			{
-				logger.error("Zeichenvorrichtung ist bereits oben!");
+				logger.error("Zeichenvorrichtung ist bereits oben");
+			}
+		}
+		else
+		{
+			if (b)
+			{
+				logger.info("Zeichenvorrichtung wird abgesenkt");
+				this.isDrawing = true;
+			}
+			else
+			{
+				logger.error("Zeichenvorrichtung ist bereits unten");
 			}
 		}
 	}

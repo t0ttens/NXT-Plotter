@@ -8,6 +8,7 @@ import java.util.TreeMap;
 import javax.swing.Timer;
 
 import nxt.lejos.data.Constants.MotorDirections;
+import nxt.lejos.imagetool.view.ManualControlFrame;
 import nxt.lejos.plotterinterface.MotorController;
 
 public class TimedKeyAdapter implements KeyListener
@@ -154,10 +155,11 @@ public class TimedKeyAdapter implements KeyListener
 				MotorController.getInstance().moveInDirection(MotorDirections.DOWN);
 				break;
 			}
-			case KeyEvent.VK_SPACE:
+			case KeyEvent.VK_CONTROL:
 			{
 				boolean switcher = !MotorController.getInstance().isDrawing();
 				MotorController.getInstance().draw(switcher);
+				ManualControlFrame.getInstance().setCheckBox(switcher);
 				break;
 			}
 			default:
