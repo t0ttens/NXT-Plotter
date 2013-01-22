@@ -38,7 +38,7 @@ public class MotorController
 	protected MotorController()
 	{		
 		logger.debug("instanziiert, Dummy Modus: " + Constants.DUMMY_MODE);
-
+		
 		this.initMotorZ();
 	}
 	
@@ -46,14 +46,14 @@ public class MotorController
 	//------------------------Methods/Functions------------------------------------
 	//-----------------------------------------------------------------------------
 	
+	public boolean isDrawing()
+	{
+		return isDrawing;
+	}
+
 	protected void initMotorZ()
 	{
 		Motor.C.resetTachoCount();
-	}
-	
-	public boolean isDrawing()
-	{
-		return this.isDrawing;
 	}
 
 	public void draw(boolean b)
@@ -83,7 +83,7 @@ public class MotorController
 				Motor.C.setSpeed(50);
 				Motor.C.rotateTo(0);
 				
-				this.isDrawing = false;
+				this.isDrawing = true;
 			}
 			else
 			{

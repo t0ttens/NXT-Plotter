@@ -1,6 +1,5 @@
 package nxt.lejos.plotterinterface;
 
-import lejos.nxt.Motor;
 import nxt.lejos.data.Constants.MotorDirections;
 
 /**
@@ -29,9 +28,36 @@ public class MotorControllerDummy extends MotorController
 	}
 	
 	@Override
-	public boolean isDrawing()
+	public void draw(boolean b)
 	{
-		return super.isDrawing();
+		logger.debug("draw() wird aufgerufen mit Parameter " + b);
+		
+		if (b)
+		{
+			if (this.isDrawing)
+			{
+				logger.error("Zeichenvorrichtung ist bereits unten!");
+			}
+			else
+			{
+				logger.info("Zeichenvorrichtung wird abgesenkt");
+				
+				this.isDrawing = true;
+			}
+		}
+		else
+		{
+			if (isDrawing)
+			{
+				logger.info("Zeichenvorrichtung wird hochgefahren");
+				
+				this.isDrawing = false;
+			}
+			else
+			{
+				logger.error("Zeichenvorrichtung ist bereits oben!");
+			}
+		}
 	}
 
 	@Override
@@ -53,35 +79,6 @@ public class MotorControllerDummy extends MotorController
 		if (this.yInverted)
 		{
 			y = -y;
-		}
-	}
-
-	@Override
-	public void draw(boolean b)
-	{
-		if (b)
-		{
-			if (this.isDrawing)
-			{
-				logger.error("Zeichenvorrichtung ist bereits unten!");
-			}
-			else
-			{
-				logger.info("Zeichenvorrichtung wird abgesenkt");
-				this.isDrawing = true;
-			}
-		}
-		else
-		{
-			if (isDrawing)
-			{
-				logger.info("Zeichenvorrichtung wird hochgefahren");
-				this.isDrawing = false;
-			}
-			else
-			{
-				logger.error("Zeichenvorrichtung ist bereits oben!");
-			}
 		}
 	}
 
