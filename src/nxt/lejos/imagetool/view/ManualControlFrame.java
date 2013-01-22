@@ -127,10 +127,9 @@ public class ManualControlFrame extends JDialog
 			}
 		});
 		
-		//DrawCheckBox-Actionlistener
+		//DrawCheckBox mit Actionlistener
 		this.controlPanel.add(this.drawCheckBox);
-		//Ueberpfuefe Position der Malvorrichtung und setze CheckBox entsprechend
-		this.drawCheckBox.setSelected(MotorController.getInstance().isDrawing());
+		
 		this.drawCheckBox.addActionListener(new AbstractAction()
 		{
 			private static final long serialVersionUID = 1L;
@@ -138,9 +137,12 @@ public class ManualControlFrame extends JDialog
 			@Override
 			public void actionPerformed(ActionEvent arg0)
 			{
+				//Die draw() bekommt gleich den boolean-Wert ob die Checkbox gesetzt ist
 				MotorController.getInstance().draw(drawCheckBox.isSelected());
 			}
 		});
+		//Ueberpfuefe Position der Malvorrichtung und setze CheckBox entsprechend
+		this.drawCheckBox.setSelected(MotorController.getInstance().isDrawing());
 		
 		this.add(this.controlPanel, BorderLayout.SOUTH);
 		
