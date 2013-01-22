@@ -276,4 +276,41 @@ public class TableContainer extends JScrollPane
 			this.tableModel.addRow(testVector);
 		}
 	}
+	
+	public void generateHeart()
+	{
+		this.clearTable();
+		
+		//rechte Seite
+		for (int i=0; i<=60; i++)
+		{	
+			double xExact = 0.01*(-Math.pow(i, 2) + 40*i + 1200)*Math.sin(Math.PI*i/180);
+			double yExact = 0.01*(-Math.pow(i, 2) + 40*i + 1200)*Math.cos(Math.PI*i/180);
+			
+			int x = Constants.X_MAX/2 + (int) Math.round(400 * xExact);
+			int y = Constants.Y_MAX/2 - (int) Math.round(400 * yExact);
+			
+			Vector<Integer> addVector = new Vector<Integer>();
+			addVector.add(x);
+			addVector.add(y);
+			
+			this.tableModel.addRow(addVector);
+		}
+		
+		//linke Seite
+		for (int i=60; i>=0; i--)
+		{	
+			double xExact = -0.01*(-Math.pow(i, 2) + 40*i + 1200)*Math.sin(Math.PI*i/180);
+			double yExact = 0.01*(-Math.pow(i, 2) + 40*i + 1200)*Math.cos(Math.PI*i/180);
+			
+			int x = Constants.X_MAX/2 + (int) Math.round(400 * xExact);
+			int y = Constants.Y_MAX/2 - (int) Math.round(400 * yExact);
+			
+			Vector<Integer> addVector = new Vector<Integer>();
+			addVector.add(x);
+			addVector.add(y);
+			
+			this.tableModel.addRow(addVector);
+		}
+	}
 }

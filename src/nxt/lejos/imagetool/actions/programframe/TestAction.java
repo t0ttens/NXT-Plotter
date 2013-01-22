@@ -26,6 +26,5 @@ public class TestAction extends AbstractAction
 	public void actionPerformed(ActionEvent arg0)
 	{
 		TableContainer.getInstance().generateRandomPoints();
-//		MotorController.getInstance().moveToStartPosition();
 	}
 }

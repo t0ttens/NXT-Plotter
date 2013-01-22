@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 
 import nxt.lejos.data.Constants;
 import nxt.lejos.data.Constants.MotorDirections;
+import nxt.lejos.imagetool.actions.listener.MoveKeyListener;
 import nxt.lejos.imagetool.view.components.DirectionButton;
 import nxt.lejos.plotterinterface.MotorController;
 

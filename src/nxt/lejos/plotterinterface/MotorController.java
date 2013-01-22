@@ -25,8 +25,8 @@ public class MotorController
 	
 	protected boolean isDrawing = false;
 	
-	protected boolean xInverted = true;
-	protected boolean yInverted = false;
+	protected boolean xInverted = false;
+	protected boolean yInverted = true;
 	
 	private boolean xMotorRuns = false;
 	private boolean yMotorRuns = false;
@@ -192,24 +192,24 @@ public class MotorController
 				Motor.B.forward();
 				break;
 			case UP:
-				Motor.A.backward();
+				Motor.B.forward();
 				break;
 			case RIGHT_UP:
+				Motor.A.forward();
+				Motor.B.forward();
+				break;
+			case LEFT:
+				Motor.A.backward();
+				break;
+			case RIGHT:
+				Motor.A.forward();
+				break;
+			case LEFT_DOWN:
 				Motor.A.backward();
 				Motor.B.backward();
 				break;
-			case LEFT:
-				Motor.B.forward();
-				break;
-			case RIGHT:
-				Motor.B.backward();
-				break;
-			case LEFT_DOWN:
-				Motor.A.forward();
-				Motor.B.forward();
-				break;
 			case DOWN:
-				Motor.A.forward();
+				Motor.B.backward();
 				break;
 			case RIGHT_DOWN:
 				Motor.A.forward();
