@@ -22,7 +22,7 @@ public interface Constants
 	public final Border PREFERED_BORDER_TYPE = BorderFactory.createEtchedBorder();
 	
 	//Programmablauf
-	public final boolean DUMMY_MODE = false;
+	public final boolean DUMMY_MODE = true;
 	
 	public enum ValidatorResults {TRUE, X_INVALID, Y_INVALID}
 	public enum MotorDirections {LEFT_UP, UP, RIGHT_UP, LEFT, RIGHT, LEFT_DOWN, DOWN, RIGHT_DOWN}

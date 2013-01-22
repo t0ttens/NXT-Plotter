@@ -8,7 +8,7 @@ public class MoveKeyListener implements KeyListener
 	//-----------------------------------------------------------------------------
 	//-----------------------------Variables---------------------------------------
 	//-----------------------------------------------------------------------------
-	
+
 	//-----------------------------------------------------------------------------
 	//-----------------------------Constructor(s)----------------------------------
 	//-----------------------------------------------------------------------------
@@ -19,25 +19,19 @@ public class MoveKeyListener implements KeyListener
 	
 	@Override
 	public void keyPressed(KeyEvent e)
-	{
-		if (e.getKeyCode() == KeyEvent.VK_UP)
-		{
-			System.out.println("UP jo");
-		}
+	{	
+		System.out.println("keyPressed");
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e)
 	{
-		if (e.getKeyCode() == KeyEvent.VK_UP)
-		{
-			System.out.println("UP no");
-		}
+		System.out.println("keyReleased");
 	}
 
 	@Override
 	public void keyTyped(KeyEvent e)
 	{
-		System.out.println(e.getKeyCode() + " typed");
+		
 	}
 }

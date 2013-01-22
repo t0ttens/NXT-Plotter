@@ -1,5 +1,6 @@
 package nxt.lejos.plotterinterface;
 
+import lejos.nxt.Motor;
 import nxt.lejos.data.Constants.MotorDirections;
 
 /**
@@ -20,7 +21,7 @@ public class MotorControllerDummy extends MotorController
 	//-----------------------------------------------------------------------------
 	//------------------------Methods/Functions------------------------------------
 	//-----------------------------------------------------------------------------
-	
+
 	@Override
 	protected void initMotorZ()
 	{
@@ -85,13 +86,19 @@ public class MotorControllerDummy extends MotorController
 	}
 
 	@Override
-	public void move(MotorDirections direction)
+	public void moveInDirection(MotorDirections direction)
 	{
 		logger.info("Schlitten faehrt nach " + direction);
 	}
 
 	@Override
-	public void stop()
+	public void stopDirection(MotorDirections direction)
+	{
+		logger.debug(direction + " stoppt");
+	}
+	
+	@Override
+	public void stopMotors()
 	{
 		logger.info("Motoren stoppen");
 	}

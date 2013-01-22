@@ -84,13 +84,13 @@ public class DirectionButton extends JButton
 			@Override
 			public void mouseReleased(MouseEvent arg0)
 			{
-				MotorController.getInstance().stop();
+				MotorController.getInstance().stopMotors();
 			}
 			
 			@Override
 			public void mousePressed(MouseEvent arg0)
 			{
-				MotorController.getInstance().move(direction);
+				MotorController.getInstance().moveInDirection(direction);
 			}
 			
 			@Override

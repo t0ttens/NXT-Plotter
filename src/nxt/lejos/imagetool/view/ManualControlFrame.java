@@ -1,6 +1,7 @@
 package nxt.lejos.imagetool.view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -14,7 +15,7 @@ import javax.swing.JPanel;
 
 import nxt.lejos.data.Constants;
 import nxt.lejos.data.Constants.MotorDirections;
-import nxt.lejos.imagetool.actions.listener.MoveKeyListener;
+import nxt.lejos.imagetool.actions.listener.TimedKeyAdapter;
 import nxt.lejos.imagetool.view.components.DirectionButton;
 import nxt.lejos.plotterinterface.MotorController;
 
@@ -145,7 +146,16 @@ public class ManualControlFrame extends JDialog
 	
 	private void initKeyListener()
 	{
-		this.setFocusable(true);
-		this.addKeyListener(new MoveKeyListener());
+		TimedKeyAdapter keyListener = new TimedKeyAdapter(true, 10);
+
+		//Wird alles Komponenten der beiden Panels hinzugefügt
+		for (Component component: this.buttonPanel.getComponents())
+		{
+			component.addKeyListener(keyListener);
+		}
+		for (Component component: this.controlPanel.getComponents())
+		{
+			component.addKeyListener(keyListener);
+		}
 	}
 }

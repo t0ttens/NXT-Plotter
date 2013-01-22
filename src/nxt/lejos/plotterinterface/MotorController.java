@@ -55,6 +55,42 @@ public class MotorController
 	{
 		return this.isDrawing;
 	}
+
+	public void draw(boolean b)
+	{
+		if (b)
+		{
+			if (this.isDrawing)
+			{
+				logger.error("Zeichenvorrichtung ist bereits unten!");
+			}
+			else
+			{
+				logger.info("Zeichenvorrichtung wird abgesenkt");
+				
+				Motor.C.setSpeed(50);
+				Motor.C.rotateTo(-50);
+				
+				this.isDrawing = true;
+			}
+		}
+		else
+		{
+			if (isDrawing)
+			{
+				logger.info("Zeichenvorrichtung wird hochgefahren");
+				
+				Motor.C.setSpeed(50);
+				Motor.C.rotateTo(0);
+				
+				this.isDrawing = false;
+			}
+			else
+			{
+				logger.error("Zeichenvorrichtung ist bereits oben!");
+			}
+		}
+	}
 	
 	public void moveToStartPosition()
 	{
@@ -145,43 +181,7 @@ public class MotorController
 		logger.info("Schlittenposition: " + Motor.A.getTachoCount() + "/" + Motor.B.getTachoCount());
 	}
 	
-	public void draw(boolean b)
-	{
-		if (b)
-		{
-			if (this.isDrawing)
-			{
-				logger.error("Zeichenvorrichtung ist bereits unten!");
-			}
-			else
-			{
-				logger.info("Zeichenvorrichtung wird abgesenkt");
-				
-				Motor.C.setSpeed(50);
-				Motor.C.rotateTo(-50);
-				
-				this.isDrawing = true;
-			}
-		}
-		else
-		{
-			if (isDrawing)
-			{
-				logger.info("Zeichenvorrichtung wird hochgefahren");
-				
-				Motor.C.setSpeed(50);
-				Motor.C.rotateTo(0);
-				
-				this.isDrawing = false;
-			}
-			else
-			{
-				logger.error("Zeichenvorrichtung ist bereits oben!");
-			}
-		}
-	}
-	
-	public void move(MotorDirections direction)
+	public void moveInDirection(MotorDirections direction)
 	{
 		logger.info("Schlitten faehrt nach " + direction);
 		
@@ -223,7 +223,36 @@ public class MotorController
 		logger.debug("Motor(en) in Bewegung");
 	}
 	
-	public void stop()
+	public void stopDirection(MotorDirections direction)
+	{
+		switch (direction)
+		{
+			case LEFT:
+			{
+				Motor.B.stop();
+				break;
+			}
+			case RIGHT:
+			{
+				Motor.B.stop();
+				break;
+			}
+			case UP:
+			{
+				Motor.A.stop();
+				break;
+			}
+			case DOWN:
+			{
+				Motor.A.stop();
+				break;
+			}
+			default:
+				break;
+		}
+	}
+	
+	public void stopMotors()
 	{
 		logger.info("Motor(en) stoppen");
 		

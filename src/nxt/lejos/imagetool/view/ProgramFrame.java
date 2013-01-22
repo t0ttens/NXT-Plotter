@@ -88,6 +88,11 @@ public class ProgramFrame extends JFrame
 		this.pack();
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
+		
+//		for (Component component: this.getComponents())
+//		{
+//			System.out.println(component.getName());
+//		}
 	}
 	
 	//-----------------------------------------------------------------------------
