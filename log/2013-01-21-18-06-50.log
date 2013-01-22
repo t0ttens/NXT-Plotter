@@ -1,0 +1,4 @@
+2013-01-21 18:06:50,007 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-21 18:06:50,463 [main] DEBUG ProgramFrame - instanziiert
+2013-01-21 18:06:50,480 [main] DEBUG TableContainer - instanziiert
+2013-01-21 18:06:50,490 [main] DEBUG SimpleDrawComponent - instanziiert

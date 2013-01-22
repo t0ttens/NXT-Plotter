@@ -1,0 +1,387 @@
+2013-01-21 18:14:21,474 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-21 18:14:22,289 [main] DEBUG ProgramFrame - instanziiert
+2013-01-21 18:14:22,307 [main] DEBUG TableContainer - instanziiert
+2013-01-21 18:14:22,318 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-21 18:14:25,234 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-21 18:14:25,236 [AWT-EventQueue-0] DEBUG MotorController - instanziiert, Dummy Modus: false
+2013-01-21 18:14:49,755 [AWT-EventQueue-0] DEBUG ManualControlFrame - instanziiert
+2013-01-21 18:14:51,789 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-21 18:14:53,523 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-21 18:18:37,920 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-21 18:18:45,730 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an
+2013-01-21 18:18:51,627 [AWT-EventQueue-0] INFO MotorController - Schlitten in Ausgangsposition: 0/0
+2013-01-21 18:18:53,030 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an
+2013-01-21 18:19:14,178 [AWT-EventQueue-0] INFO MotorController - Schlitten in Ausgangsposition: 0/0
+2013-01-21 18:19:19,213 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-21 18:19:20,687 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-21 18:19:37,123 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-21 18:19:38,703 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-21 18:19:40,515 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-21 18:19:49,731 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-21 18:19:53,707 [AWT-EventQueue-0] DEBUG ProcessListAction - aufgerufen
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] DEBUG Functions - Berechne Koordinaten und Geschwindigkeiten aus der Tabelle
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9987389659520807
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9987096774193548
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9993361897290447
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.000463177396943
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9985170538803757
+2013-01-21 18:19:53,710 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9992526956336073
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0009442870632672
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0011297471104545
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9999354046896195
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0003789314134142
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013654984069185
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0024213075060533
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9988901220865705
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.999000999000999
+2013-01-21 18:19:53,711 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9948415622697127
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9885583524027459
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9782608695652173
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0033677853907792
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0034431874077718
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0019417475728154
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0004810004810005
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989082969432315
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0010695187165775
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0001041775184916
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.000741289844329
+2013-01-21 18:19:53,712 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0007468259895445
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0004033884630898
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9984591679506934
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0026666666666666
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0034305317324186
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0057621791513882
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9931034482758619
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9933774834437085
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9615384615384615
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9937888198757763
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0120481927710843
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9939975990396158
+2013-01-21 18:19:53,713 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9991836734693877
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9998737533139754
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9982540823662319
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013693940431359
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0015898251192368
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9975793094661739
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9978441638435479
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0010270798366692
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989082969432315
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0004940711462451
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9990875912408759
+2013-01-21 18:19:53,714 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989528795811519
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013089005235603
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0009671179883946
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.00112132765194
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0014513788098693
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0007258350964434
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0017450360798001
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9988385598141697
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.001788908765653
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9978403931504752
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9978403931504752
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.001788908765653
+2013-01-21 18:19:53,715 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9988385598141697
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0017450360798001
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0007258350964434
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0014513788098693
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.00112132765194
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0009671179883946
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013089005235603
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989528795811519
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9990875912408759
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0004940711462451
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989082969432315
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0010270798366692
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9978441638435479
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9975793094661739
+2013-01-21 18:19:53,716 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0015898251192368
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013693940431359
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9982540823662319
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9998737533139754
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9991836734693877
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9939975990396158
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0120481927710843
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9937888198757763
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9615384615384615
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9933774834437085
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9931034482758619
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0057621791513882
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0034305317324186
+2013-01-21 18:19:53,717 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0026666666666666
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9984591679506934
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0004033884630898
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0007468259895445
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.000741289844329
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0001041775184916
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0010695187165775
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989082969432315
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0004810004810005
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0019417475728154
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0034431874077718
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0033677853907792
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9782608695652173
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9885583524027459
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9948415622697127
+2013-01-21 18:19:53,718 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.999000999000999
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9988901220865705
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0024213075060533
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013654984069185
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0003789314134142
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9999354046896195
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0011297471104545
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0009442870632672
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9992526956336073
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9985170538803757
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.000463177396943
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9993361897290447
+2013-01-21 18:19:53,719 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9987096774193548
+2013-01-21 18:19:53,720 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an
+2013-01-21 18:19:53,738 [AWT-EventQueue-0] INFO MotorController - Schlitten in Ausgangsposition: 0/0
+2013-01-21 18:19:53,738 [AWT-EventQueue-0] INFO MotorController - 6500/2200 wird angefahren, Geschwindigkeit: 360/122
+2013-01-21 18:20:12,697 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6499/-2201
+2013-01-21 18:20:12,698 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird abgesenkt
+2013-01-21 18:20:13,928 [AWT-EventQueue-0] INFO MotorController - 6586/2045 wird angefahren, Geschwindigkeit: 200/360
+2013-01-21 18:20:14,540 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6586/-2044
+2013-01-21 18:20:14,540 [AWT-EventQueue-0] INFO MotorController - 6678/1899 wird angefahren, Geschwindigkeit: 227/360
+2013-01-21 18:20:15,131 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6678/-1899
+2013-01-21 18:20:15,131 [AWT-EventQueue-0] INFO MotorController - 6774/1763 wird angefahren, Geschwindigkeit: 254/360
+2013-01-21 18:20:15,704 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6775/-1763
+2013-01-21 18:20:15,704 [AWT-EventQueue-0] INFO MotorController - 6875/1637 wird angefahren, Geschwindigkeit: 289/360
+2013-01-21 18:20:16,249 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6875/-1637
+2013-01-21 18:20:16,249 [AWT-EventQueue-0] INFO MotorController - 6979/1521 wird angefahren, Geschwindigkeit: 323/360
+2013-01-21 18:20:16,760 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6978/-1523
+2013-01-21 18:20:16,760 [AWT-EventQueue-0] INFO MotorController - 7087/1415 wird angefahren, Geschwindigkeit: 360/353
+2013-01-21 18:20:17,254 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7087/-1415
+2013-01-21 18:20:17,255 [AWT-EventQueue-0] INFO MotorController - 7198/1319 wird angefahren, Geschwindigkeit: 360/311
+2013-01-21 18:20:17,748 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7197/-1320
+2013-01-21 18:20:17,748 [AWT-EventQueue-0] INFO MotorController - 7311/1233 wird angefahren, Geschwindigkeit: 360/274
+2013-01-21 18:20:18,246 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7311/-1233
+2013-01-21 18:20:18,246 [AWT-EventQueue-0] INFO MotorController - 7425/1157 wird angefahren, Geschwindigkeit: 360/240
+2013-01-21 18:20:18,753 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7425/-1158
+2013-01-21 18:20:18,754 [AWT-EventQueue-0] INFO MotorController - 7542/1091 wird angefahren, Geschwindigkeit: 360/203
+2013-01-21 18:20:19,270 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7542/-1092
+2013-01-21 18:20:19,270 [AWT-EventQueue-0] INFO MotorController - 7659/1036 wird angefahren, Geschwindigkeit: 360/169
+2013-01-21 18:20:19,774 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7658/-1037
+2013-01-21 18:20:19,774 [AWT-EventQueue-0] INFO MotorController - 7777/990 wird angefahren, Geschwindigkeit: 360/140
+2013-01-21 18:20:20,288 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7777/-990
+2013-01-21 18:20:20,288 [AWT-EventQueue-0] INFO MotorController - 7896/955 wird angefahren, Geschwindigkeit: 360/106
+2013-01-21 18:20:20,801 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7896/-955
+2013-01-21 18:20:20,801 [AWT-EventQueue-0] INFO MotorController - 8013/930 wird angefahren, Geschwindigkeit: 360/77
+2013-01-21 18:20:21,311 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8013/-930
+2013-01-21 18:20:21,312 [AWT-EventQueue-0] INFO MotorController - 8131/915 wird angefahren, Geschwindigkeit: 360/46
+2013-01-21 18:20:21,826 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8131/-915
+2013-01-21 18:20:21,826 [AWT-EventQueue-0] INFO MotorController - 8246/909 wird angefahren, Geschwindigkeit: 360/19
+2013-01-21 18:20:22,329 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8245/-909
+2013-01-21 18:20:22,329 [AWT-EventQueue-0] INFO MotorController - 8361/914 wird angefahren, Geschwindigkeit: 360/16
+2013-01-21 18:20:23,030 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8362/-915
+2013-01-21 18:20:23,031 [AWT-EventQueue-0] INFO MotorController - 8473/928 wird angefahren, Geschwindigkeit: 360/45
+2013-01-21 18:20:23,522 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8472/-929
+2013-01-21 18:20:23,523 [AWT-EventQueue-0] INFO MotorController - 8582/952 wird angefahren, Geschwindigkeit: 360/79
+2013-01-21 18:20:24,013 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8582/-953
+2013-01-21 18:20:24,013 [AWT-EventQueue-0] INFO MotorController - 8689/986 wird angefahren, Geschwindigkeit: 360/114
+2013-01-21 18:20:24,495 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8689/-985
+2013-01-21 18:20:24,495 [AWT-EventQueue-0] INFO MotorController - 8792/1029 wird angefahren, Geschwindigkeit: 360/150
+2013-01-21 18:20:24,964 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8791/-1029
+2013-01-21 18:20:24,965 [AWT-EventQueue-0] INFO MotorController - 8891/1081 wird angefahren, Geschwindigkeit: 360/189
+2013-01-21 18:20:25,419 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8891/-1081
+2013-01-21 18:20:25,420 [AWT-EventQueue-0] INFO MotorController - 8987/1142 wird angefahren, Geschwindigkeit: 360/229
+2013-01-21 18:20:25,872 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8987/-1142
+2013-01-21 18:20:25,873 [AWT-EventQueue-0] INFO MotorController - 9077/1212 wird angefahren, Geschwindigkeit: 360/280
+2013-01-21 18:20:26,306 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9076/-1212
+2013-01-21 18:20:26,306 [AWT-EventQueue-0] INFO MotorController - 9162/1290 wird angefahren, Geschwindigkeit: 360/330
+2013-01-21 18:20:26,733 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9163/-1289
+2013-01-21 18:20:26,733 [AWT-EventQueue-0] INFO MotorController - 9242/1377 wird angefahren, Geschwindigkeit: 331/360
+2013-01-21 18:20:27,168 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9242/-1376
+2013-01-21 18:20:27,169 [AWT-EventQueue-0] INFO MotorController - 9317/1472 wird angefahren, Geschwindigkeit: 284/360
+2013-01-21 18:20:27,628 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9318/-1471
+2013-01-21 18:20:27,628 [AWT-EventQueue-0] INFO MotorController - 9384/1575 wird angefahren, Geschwindigkeit: 234/360
+2013-01-21 18:20:28,100 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9384/-1575
+2013-01-21 18:20:28,100 [AWT-EventQueue-0] INFO MotorController - 9446/1686 wird angefahren, Geschwindigkeit: 201/360
+2013-01-21 18:20:28,603 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9446/-1686
+2013-01-21 18:20:28,604 [AWT-EventQueue-0] INFO MotorController - 9500/1804 wird angefahren, Geschwindigkeit: 165/360
+2013-01-21 18:20:29,124 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9500/-1803
+2013-01-21 18:20:29,124 [AWT-EventQueue-0] INFO MotorController - 9547/1929 wird angefahren, Geschwindigkeit: 135/360
+2013-01-21 18:20:29,652 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9547/-1927
+2013-01-21 18:20:29,652 [AWT-EventQueue-0] INFO MotorController - 9586/2061 wird angefahren, Geschwindigkeit: 106/360
+2013-01-21 18:20:30,216 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9586/-2061
+2013-01-21 18:20:30,217 [AWT-EventQueue-0] INFO MotorController - 9618/2199 wird angefahren, Geschwindigkeit: 83/360
+2013-01-21 18:20:30,792 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9617/-2199
+2013-01-21 18:20:30,792 [AWT-EventQueue-0] INFO MotorController - 9640/2344 wird angefahren, Geschwindigkeit: 55/360
+2013-01-21 18:20:31,380 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9640/-2343
+2013-01-21 18:20:31,380 [AWT-EventQueue-0] INFO MotorController - 9655/2495 wird angefahren, Geschwindigkeit: 36/360
+2013-01-21 18:20:31,997 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9655/-2495
+2013-01-21 18:20:31,998 [AWT-EventQueue-0] INFO MotorController - 9660/2651 wird angefahren, Geschwindigkeit: 12/360
+2013-01-21 18:20:32,685 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9659/-2651
+2013-01-21 18:20:32,685 [AWT-EventQueue-0] INFO MotorController - 9656/2812 wird angefahren, Geschwindigkeit: 9/360
+2013-01-21 18:20:33,321 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9656/-2811
+2013-01-21 18:20:33,322 [AWT-EventQueue-0] INFO MotorController - 9642/2978 wird angefahren, Geschwindigkeit: 30/360
+2013-01-21 18:20:33,975 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9641/-2978
+2013-01-21 18:20:33,975 [AWT-EventQueue-0] INFO MotorController - 9619/3148 wird angefahren, Geschwindigkeit: 49/360
+2013-01-21 18:20:34,631 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9619/-3147
+2013-01-21 18:20:34,632 [AWT-EventQueue-0] INFO MotorController - 9585/3323 wird angefahren, Geschwindigkeit: 70/360
+2013-01-21 18:20:35,308 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9585/-3323
+2013-01-21 18:20:35,308 [AWT-EventQueue-0] INFO MotorController - 9541/3501 wird angefahren, Geschwindigkeit: 89/360
+2013-01-21 18:20:35,993 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9541/-3501
+2013-01-21 18:20:35,993 [AWT-EventQueue-0] INFO MotorController - 9487/3683 wird angefahren, Geschwindigkeit: 107/360
+2013-01-21 18:20:36,690 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9488/-3682
+2013-01-21 18:20:36,691 [AWT-EventQueue-0] INFO MotorController - 9422/3867 wird angefahren, Geschwindigkeit: 127/360
+2013-01-21 18:20:37,389 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9422/-3867
+2013-01-21 18:20:37,389 [AWT-EventQueue-0] INFO MotorController - 9345/4054 wird angefahren, Geschwindigkeit: 148/360
+2013-01-21 18:20:38,099 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9345/-4053
+2013-01-21 18:20:38,099 [AWT-EventQueue-0] INFO MotorController - 9258/4242 wird angefahren, Geschwindigkeit: 167/360
+2013-01-21 18:20:38,806 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9257/-4241
+2013-01-21 18:20:38,806 [AWT-EventQueue-0] INFO MotorController - 9159/4433 wird angefahren, Geschwindigkeit: 187/360
+2013-01-21 18:20:39,531 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9160/-4433
+2013-01-21 18:20:39,531 [AWT-EventQueue-0] INFO MotorController - 9048/4624 wird angefahren, Geschwindigkeit: 209/360
+2013-01-21 18:20:40,254 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 9048/-4624
+2013-01-21 18:20:40,254 [AWT-EventQueue-0] INFO MotorController - 8926/4816 wird angefahren, Geschwindigkeit: 229/360
+2013-01-21 18:20:40,970 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8927/-4815
+2013-01-21 18:20:40,970 [AWT-EventQueue-0] INFO MotorController - 8791/5008 wird angefahren, Geschwindigkeit: 253/360
+2013-01-21 18:20:41,701 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8791/-5007
+2013-01-21 18:20:41,701 [AWT-EventQueue-0] INFO MotorController - 8645/5200 wird angefahren, Geschwindigkeit: 274/360
+2013-01-21 18:20:42,421 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8646/-5200
+2013-01-21 18:20:42,421 [AWT-EventQueue-0] INFO MotorController - 8486/5391 wird angefahren, Geschwindigkeit: 300/360
+2013-01-21 18:20:43,137 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8486/-5390
+2013-01-21 18:20:43,137 [AWT-EventQueue-0] INFO MotorController - 8316/5582 wird angefahren, Geschwindigkeit: 320/360
+2013-01-21 18:20:43,859 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8316/-5581
+2013-01-21 18:20:43,859 [AWT-EventQueue-0] INFO MotorController - 8132/5770 wird angefahren, Geschwindigkeit: 352/360
+2013-01-21 18:20:44,579 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 8132/-5770
+2013-01-21 18:20:44,579 [AWT-EventQueue-0] INFO MotorController - 7937/5956 wird angefahren, Geschwindigkeit: 360/343
+2013-01-21 18:20:45,306 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7939/-5955
+2013-01-21 18:20:45,307 [AWT-EventQueue-0] INFO MotorController - 7729/6140 wird angefahren, Geschwindigkeit: 360/318
+2013-01-21 18:20:46,078 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7729/-6139
+2013-01-21 18:20:46,078 [AWT-EventQueue-0] INFO MotorController - 7508/6320 wird angefahren, Geschwindigkeit: 360/293
+2013-01-21 18:20:46,885 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7509/-6320
+2013-01-21 18:20:46,886 [AWT-EventQueue-0] INFO MotorController - 7275/6497 wird angefahren, Geschwindigkeit: 360/273
+2013-01-21 18:20:47,724 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7274/-6497
+2013-01-21 18:20:47,724 [AWT-EventQueue-0] INFO MotorController - 7029/6669 wird angefahren, Geschwindigkeit: 360/252
+2013-01-21 18:20:48,590 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 7029/-6668
+2013-01-21 18:20:48,591 [AWT-EventQueue-0] INFO MotorController - 6771/6837 wird angefahren, Geschwindigkeit: 360/234
+2013-01-21 18:20:49,492 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6771/-6837
+2013-01-21 18:20:49,493 [AWT-EventQueue-0] INFO MotorController - 6500/7000 wird angefahren, Geschwindigkeit: 360/217
+2013-01-21 18:20:50,425 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6501/-7000
+2013-01-21 18:20:50,426 [AWT-EventQueue-0] INFO MotorController - 6500/7000 wird angefahren, Geschwindigkeit: 360/360
+2013-01-21 18:20:50,578 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6500/-6998
+2013-01-21 18:20:50,578 [AWT-EventQueue-0] INFO MotorController - 6229/6837 wird angefahren, Geschwindigkeit: 360/217
+2013-01-21 18:20:51,517 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6229/-6835
+2013-01-21 18:20:51,518 [AWT-EventQueue-0] INFO MotorController - 5971/6669 wird angefahren, Geschwindigkeit: 360/234
+2013-01-21 18:20:52,411 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5971/-6669
+2013-01-21 18:20:52,411 [AWT-EventQueue-0] INFO MotorController - 5725/6497 wird angefahren, Geschwindigkeit: 360/252
+2013-01-21 18:20:53,275 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5725/-6498
+2013-01-21 18:20:53,276 [AWT-EventQueue-0] INFO MotorController - 5492/6320 wird angefahren, Geschwindigkeit: 360/273
+2013-01-21 18:20:54,107 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5492/-6320
+2013-01-21 18:20:54,108 [AWT-EventQueue-0] INFO MotorController - 5271/6140 wird angefahren, Geschwindigkeit: 360/293
+2013-01-21 18:20:54,909 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5271/-6140
+2013-01-21 18:20:54,909 [AWT-EventQueue-0] INFO MotorController - 5063/5956 wird angefahren, Geschwindigkeit: 360/318
+2013-01-21 18:20:55,675 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5063/-5957
+2013-01-21 18:20:55,675 [AWT-EventQueue-0] INFO MotorController - 4868/5770 wird angefahren, Geschwindigkeit: 360/343
+2013-01-21 18:20:56,407 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4867/-5770
+2013-01-21 18:20:56,408 [AWT-EventQueue-0] INFO MotorController - 4684/5582 wird angefahren, Geschwindigkeit: 352/360
+2013-01-21 18:20:57,112 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4684/-5583
+2013-01-21 18:20:57,112 [AWT-EventQueue-0] INFO MotorController - 4514/5391 wird angefahren, Geschwindigkeit: 320/360
+2013-01-21 18:20:57,831 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4515/-5392
+2013-01-21 18:20:57,831 [AWT-EventQueue-0] INFO MotorController - 4355/5200 wird angefahren, Geschwindigkeit: 300/360
+2013-01-21 18:20:58,553 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4355/-5201
+2013-01-21 18:20:58,553 [AWT-EventQueue-0] INFO MotorController - 4209/5008 wird angefahren, Geschwindigkeit: 274/360
+2013-01-21 18:20:59,268 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4209/-5009
+2013-01-21 18:20:59,269 [AWT-EventQueue-0] INFO MotorController - 4074/4816 wird angefahren, Geschwindigkeit: 253/360
+2013-01-21 18:20:59,992 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4073/-4817
+2013-01-21 18:20:59,992 [AWT-EventQueue-0] INFO MotorController - 3952/4624 wird angefahren, Geschwindigkeit: 229/360
+2013-01-21 18:21:00,723 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3952/-4624
+2013-01-21 18:21:00,724 [AWT-EventQueue-0] INFO MotorController - 3841/4433 wird angefahren, Geschwindigkeit: 209/360
+2013-01-21 18:21:01,442 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3841/-4434
+2013-01-21 18:21:01,442 [AWT-EventQueue-0] INFO MotorController - 3742/4242 wird angefahren, Geschwindigkeit: 187/360
+2013-01-21 18:21:02,165 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3742/-4243
+2013-01-21 18:21:02,165 [AWT-EventQueue-0] INFO MotorController - 3655/4054 wird angefahren, Geschwindigkeit: 167/360
+2013-01-21 18:21:02,880 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3655/-4055
+2013-01-21 18:21:02,880 [AWT-EventQueue-0] INFO MotorController - 3578/3867 wird angefahren, Geschwindigkeit: 148/360
+2013-01-21 18:21:03,654 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3579/-3868
+2013-01-21 18:21:03,655 [AWT-EventQueue-0] INFO MotorController - 3513/3683 wird angefahren, Geschwindigkeit: 127/360
+2013-01-21 18:21:04,359 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3512/-3682
+2013-01-21 18:21:04,360 [AWT-EventQueue-0] INFO MotorController - 3459/3501 wird angefahren, Geschwindigkeit: 107/360
+2013-01-21 18:21:05,050 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3459/-3502
+2013-01-21 18:21:05,050 [AWT-EventQueue-0] INFO MotorController - 3415/3323 wird angefahren, Geschwindigkeit: 89/360
+2013-01-21 18:21:05,734 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3415/-3323
+2013-01-21 18:21:05,734 [AWT-EventQueue-0] INFO MotorController - 3381/3148 wird angefahren, Geschwindigkeit: 70/360
+2013-01-21 18:21:06,406 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3381/-3149
+2013-01-21 18:21:06,407 [AWT-EventQueue-0] INFO MotorController - 3358/2978 wird angefahren, Geschwindigkeit: 49/360
+2013-01-21 18:21:07,072 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3358/-2977
+2013-01-21 18:21:07,072 [AWT-EventQueue-0] INFO MotorController - 3344/2812 wird angefahren, Geschwindigkeit: 30/360
+2013-01-21 18:21:07,723 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3345/-2813
+2013-01-21 18:21:07,723 [AWT-EventQueue-0] INFO MotorController - 3340/2651 wird angefahren, Geschwindigkeit: 9/360
+2013-01-21 18:21:08,516 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3339/-2651
+2013-01-21 18:21:08,516 [AWT-EventQueue-0] INFO MotorController - 3345/2495 wird angefahren, Geschwindigkeit: 12/360
+2013-01-21 18:21:09,211 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3345/-2495
+2013-01-21 18:21:09,211 [AWT-EventQueue-0] INFO MotorController - 3360/2344 wird angefahren, Geschwindigkeit: 36/360
+2013-01-21 18:21:09,827 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3360/-2344
+2013-01-21 18:21:09,827 [AWT-EventQueue-0] INFO MotorController - 3382/2199 wird angefahren, Geschwindigkeit: 55/360
+2013-01-21 18:21:10,419 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3383/-2200
+2013-01-21 18:21:10,419 [AWT-EventQueue-0] INFO MotorController - 3414/2061 wird angefahren, Geschwindigkeit: 83/360
+2013-01-21 18:21:10,995 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3414/-2061
+2013-01-21 18:21:10,996 [AWT-EventQueue-0] INFO MotorController - 3453/1929 wird angefahren, Geschwindigkeit: 106/360
+2013-01-21 18:21:11,551 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3452/-1929
+2013-01-21 18:21:11,552 [AWT-EventQueue-0] INFO MotorController - 3500/1804 wird angefahren, Geschwindigkeit: 135/360
+2013-01-21 18:21:12,093 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3500/-1805
+2013-01-21 18:21:12,093 [AWT-EventQueue-0] INFO MotorController - 3554/1686 wird angefahren, Geschwindigkeit: 165/360
+2013-01-21 18:21:12,615 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3554/-1686
+2013-01-21 18:21:12,616 [AWT-EventQueue-0] INFO MotorController - 3616/1575 wird angefahren, Geschwindigkeit: 201/360
+2013-01-21 18:21:13,101 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3616/-1577
+2013-01-21 18:21:13,101 [AWT-EventQueue-0] INFO MotorController - 3683/1472 wird angefahren, Geschwindigkeit: 234/360
+2013-01-21 18:21:13,583 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3683/-1472
+2013-01-21 18:21:13,583 [AWT-EventQueue-0] INFO MotorController - 3758/1377 wird angefahren, Geschwindigkeit: 284/360
+2013-01-21 18:21:14,035 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3757/-1378
+2013-01-21 18:21:14,035 [AWT-EventQueue-0] INFO MotorController - 3838/1290 wird angefahren, Geschwindigkeit: 331/360
+2013-01-21 18:21:14,468 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3837/-1292
+2013-01-21 18:21:14,469 [AWT-EventQueue-0] INFO MotorController - 3923/1212 wird angefahren, Geschwindigkeit: 360/330
+2013-01-21 18:21:14,904 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 3924/-1213
+2013-01-21 18:21:14,904 [AWT-EventQueue-0] INFO MotorController - 4013/1142 wird angefahren, Geschwindigkeit: 360/280
+2013-01-21 18:21:15,333 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4013/-1141
+2013-01-21 18:21:15,333 [AWT-EventQueue-0] INFO MotorController - 4109/1081 wird angefahren, Geschwindigkeit: 360/229
+2013-01-21 18:21:15,780 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4109/-1082
+2013-01-21 18:21:15,780 [AWT-EventQueue-0] INFO MotorController - 4208/1029 wird angefahren, Geschwindigkeit: 360/189
+2013-01-21 18:21:16,240 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4208/-1029
+2013-01-21 18:21:16,241 [AWT-EventQueue-0] INFO MotorController - 4311/986 wird angefahren, Geschwindigkeit: 360/150
+2013-01-21 18:21:16,707 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4310/-986
+2013-01-21 18:21:16,707 [AWT-EventQueue-0] INFO MotorController - 4418/952 wird angefahren, Geschwindigkeit: 360/114
+2013-01-21 18:21:17,194 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4418/-952
+2013-01-21 18:21:17,194 [AWT-EventQueue-0] INFO MotorController - 4527/928 wird angefahren, Geschwindigkeit: 360/79
+2013-01-21 18:21:17,687 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4527/-929
+2013-01-21 18:21:17,688 [AWT-EventQueue-0] INFO MotorController - 4639/914 wird angefahren, Geschwindigkeit: 360/45
+2013-01-21 18:21:18,182 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4639/-914
+2013-01-21 18:21:18,182 [AWT-EventQueue-0] INFO MotorController - 4754/909 wird angefahren, Geschwindigkeit: 360/16
+2013-01-21 18:21:18,875 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4755/-910
+2013-01-21 18:21:18,875 [AWT-EventQueue-0] INFO MotorController - 4869/915 wird angefahren, Geschwindigkeit: 360/19
+2013-01-21 18:21:19,373 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4868/-915
+2013-01-21 18:21:19,373 [AWT-EventQueue-0] INFO MotorController - 4987/930 wird angefahren, Geschwindigkeit: 360/46
+2013-01-21 18:21:19,882 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 4987/-930
+2013-01-21 18:21:19,882 [AWT-EventQueue-0] INFO MotorController - 5104/955 wird angefahren, Geschwindigkeit: 360/77
+2013-01-21 18:21:20,394 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5104/-956
+2013-01-21 18:21:20,394 [AWT-EventQueue-0] INFO MotorController - 5223/990 wird angefahren, Geschwindigkeit: 360/106
+2013-01-21 18:21:20,909 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5223/-989
+2013-01-21 18:21:20,909 [AWT-EventQueue-0] INFO MotorController - 5341/1036 wird angefahren, Geschwindigkeit: 360/140
+2013-01-21 18:21:21,426 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5341/-1036
+2013-01-21 18:21:21,426 [AWT-EventQueue-0] INFO MotorController - 5458/1091 wird angefahren, Geschwindigkeit: 360/169
+2013-01-21 18:21:21,934 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5458/-1091
+2013-01-21 18:21:21,935 [AWT-EventQueue-0] INFO MotorController - 5575/1157 wird angefahren, Geschwindigkeit: 360/203
+2013-01-21 18:21:22,446 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5575/-1157
+2013-01-21 18:21:22,446 [AWT-EventQueue-0] INFO MotorController - 5689/1233 wird angefahren, Geschwindigkeit: 360/240
+2013-01-21 18:21:22,953 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5689/-1232
+2013-01-21 18:21:22,953 [AWT-EventQueue-0] INFO MotorController - 5802/1319 wird angefahren, Geschwindigkeit: 360/274
+2013-01-21 18:21:23,449 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5802/-1319
+2013-01-21 18:21:23,449 [AWT-EventQueue-0] INFO MotorController - 5913/1415 wird angefahren, Geschwindigkeit: 360/311
+2013-01-21 18:21:23,939 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 5913/-1414
+2013-01-21 18:21:23,939 [AWT-EventQueue-0] INFO MotorController - 6021/1521 wird angefahren, Geschwindigkeit: 360/353
+2013-01-21 18:21:24,435 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6021/-1521
+2013-01-21 18:21:24,435 [AWT-EventQueue-0] INFO MotorController - 6125/1637 wird angefahren, Geschwindigkeit: 323/360
+2013-01-21 18:21:24,947 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6125/-1637
+2013-01-21 18:21:24,948 [AWT-EventQueue-0] INFO MotorController - 6226/1763 wird angefahren, Geschwindigkeit: 289/360
+2013-01-21 18:21:25,490 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6225/-1762
+2013-01-21 18:21:25,491 [AWT-EventQueue-0] INFO MotorController - 6322/1899 wird angefahren, Geschwindigkeit: 254/360
+2013-01-21 18:21:26,064 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6322/-1899
+2013-01-21 18:21:26,064 [AWT-EventQueue-0] INFO MotorController - 6414/2045 wird angefahren, Geschwindigkeit: 227/360
+2013-01-21 18:21:26,668 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6415/-2045
+2013-01-21 18:21:26,668 [AWT-EventQueue-0] INFO MotorController - 6500/2200 wird angefahren, Geschwindigkeit: 200/360
+2013-01-21 18:21:27,292 [AWT-EventQueue-0] INFO MotorController - Schlittenposition: 6500/-2200
+2013-01-21 18:21:27,292 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung wird hochgefahren
+2013-01-21 18:21:28,519 [AWT-EventQueue-0] INFO MotorController - Zeichenvorrichtung faehrt Startposition an
+2013-01-21 18:21:46,739 [AWT-EventQueue-0] INFO MotorController - Schlitten in Ausgangsposition: 0/0

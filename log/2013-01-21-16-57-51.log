@@ -1,0 +1,19 @@
+2013-01-21 16:57:51,401 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-21 16:57:51,864 [main] DEBUG ProgramFrame - instanziiert
+2013-01-21 16:57:51,881 [main] DEBUG TableContainer - instanziiert
+2013-01-21 16:57:51,892 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-21 16:57:55,235 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-21 16:57:58,158 [AWT-EventQueue-0] DEBUG TableContainer - Tabelle wird geloescht
+2013-01-21 16:58:00,785 [AWT-EventQueue-0] DEBUG ProcessListAction - aufgerufen
+2013-01-21 16:58:00,786 [AWT-EventQueue-0] DEBUG Functions - Berechne Koordinaten und Geschwindigkeiten aus der Tabelle
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9984791143493792
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9514546684709065
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9969303115407223
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0013400175494684
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9932747025349198
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9992493219682294
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9991760771579509
+2013-01-21 16:58:00,787 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9969256907083046
+2013-01-21 16:58:00,788 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9982440558919045
+2013-01-21 16:58:00,788 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 0.9989937963982666
+2013-01-21 16:58:00,789 [AWT-EventQueue-0] DEBUG MotorController - instanziiert, Dummy Modus: false

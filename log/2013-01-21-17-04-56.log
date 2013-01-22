@@ -1,0 +1,9 @@
+2013-01-21 17:04:56,816 [main] INFO MainClass - NXT-Plotter v0.1 startet
+2013-01-21 17:04:57,639 [main] DEBUG ProgramFrame - instanziiert
+2013-01-21 17:04:57,656 [main] DEBUG TableContainer - instanziiert
+2013-01-21 17:04:57,667 [main] DEBUG SimpleDrawComponent - instanziiert
+2013-01-21 17:05:33,504 [AWT-EventQueue-0] DEBUG ProcessListAction - aufgerufen
+2013-01-21 17:05:33,505 [AWT-EventQueue-0] DEBUG Functions - Berechne Koordinaten und Geschwindigkeiten aus der Tabelle
+2013-01-21 17:05:33,505 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0008554319931566
+2013-01-21 17:05:33,505 [AWT-EventQueue-0] WARN Functions - Abstands- und Geschwindigkeitsquotient abweichend (qD/qS): 1.0008554319931566
+2013-01-21 17:05:33,506 [AWT-EventQueue-0] DEBUG MotorController - instanziiert, Dummy Modus: false
